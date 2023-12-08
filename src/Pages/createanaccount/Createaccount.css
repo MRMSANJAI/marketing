@@ -1,0 +1,55 @@
+.start-page{
+    font-family: sans-serif;
+    text-align: left;
+    margin-left: 160px;   
+}
+
+.head1{
+    margin-top: 155px;
+    font-size: 15px;
+    font-weight: 100;
+    padding-bottom: 15px;
+}
+.head2{
+    color: gray;
+    font-size: 18px;
+    line-height: normal;
+}
+.head2 input{
+    color: gray;
+    width: 370px;
+    height: 45px;
+    border:1px solid;
+    border-radius: 5px;
+    margin-top: -56px;
+}
+.checkbox1{
+    align-items: center;
+    justify-content: center;
+    margin-top: 13px;
+    width: 370px;
+    height: 65px;
+    font-size: 15px;
+    border: 2px solid rgb(194, 181, 181);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.recap-para{
+    float: right;
+    margin-top: -34px;
+    margin-right: 10px;
+}
+.button{
+    margin-top: 30px;
+    width: 370px;
+    height: 39px;
+    
+}
+.or{
+    text-align: center;
+    font-size: 15px;
+}
+.login{
+    width: 370px;
+    height: 39px;
+}

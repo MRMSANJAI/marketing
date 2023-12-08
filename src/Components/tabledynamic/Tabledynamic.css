@@ -1,0 +1,32 @@
+.table-container {
+    margin: 20px;
+    width: 1120px;
+    margin-left: -20px;
+  }
+  
+  .root-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .header-table {
+    background-color: #f0f0f0;
+  }
+  
+  .column-header-cell,
+  .row-header-cell,
+  .cell-table {
+    border: 1px solid #888;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .row-table:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .row-table:hover {
+    background-color: #e6f7ff;
+  }
+  
+  

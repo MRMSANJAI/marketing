@@ -1,0 +1,159 @@
+.tables,  td {
+    border-collapse: collapse;
+    border: 1px solid #000;
+    border-radius: 30px;
+    
+}
+ th, td, .tablehead {
+    border: 1px solid #080707;
+    padding: 8px;
+    text-align: left;
+    border-radius: 5px;
+   
+    
+  }
+  colo {
+   background-color: aquamarine;
+  }
+  .th{
+    padding: 10%;
+    border-radius: 5px;
+    
+    font-size: 20px;
+    width: 200%;
+  }
+  .data{
+    height: 40px;
+    width: 300px !important;
+   
+  }
+ .peri{
+    font-size: 18px;
+    font-weight:450;
+
+  
+
+ }
+ .drs{
+  width: 3%;
+ }
+ .vied{
+  display: flex;
+ gap: 10px;
+  padding-left: 5%;
+  font-size: 12px;
+
+ }
+ .ith{
+width: 200x !important;
+ }
+ .btnc{
+  background-color: rgba(16, 49, 233, 0.74);
+  margin-bottom: 30px;
+  color: aliceblue;
+  font-size: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  height: 45px;
+  width: 120px;
+ }
+ .card{
+  width: 150px;
+ }
+ .card2{
+  width: 110px;
+ }
+ .card3{
+  width: 250px;
+ }
+ .card4{
+  width: 400px;
+ }
+.tables{
+  width: 95%;
+}
+.btnon{
+  size: 20px;
+}
+.blue{
+  background-color: #b1d4e0e0;
+}
+.container{
+  width: 500px; 
+  height: 100%; 
+  border: 1px solid #ccc; 
+  padding: 20px; 
+  margin: 20px; 
+  background-color: #f0f0f0; 
+  border-radius: 8px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ padding-left: 40px;
+ margin-bottom: 30px;
+font-style: inherit;
+margin-bottom: 30px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  padding-top: 25px;
+  font-size: 15px;
+  gap: 28px;
+  margin-left: 90px;
+  transform: scale(1.4); /* Scale the size of the radio button */
+}
+.boc{
+  width: 450px;
+  height: 30px;
+ margin-top: 15px;
+ border-radius: 5px;
+}
+.top{
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.btnr{
+  transform: scale(1.7);
+}
+.icon{
+  border: 1px solid #ccc; 
+  height: 24px;
+  width: 23px;
+  align-items: center;
+  padding-left: 10px;
+  padding-top:5px ;
+  border-radius: 5px;
+}
+.btn1{
+  border: 1px solid #ccc; 
+  height: 45px;
+  width: 85px;
+ margin-right: 25px;
+ border-radius: 5px;
+ cursor: pointer;
+}
+.btn2{
+  border: 1px solid #ccc; 
+  height: 45px;
+  width: 85px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(0, 89, 255, 0.884);
+}
+.gapi{
+  gap: 90px;
+  align-items: end;
+  margin-left: 300px;
+}
+.camp{
+  color: rgba(0, 89, 255, 0.884);
+  font-size: 14px;
+ 
+  
+}
+.aling{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
