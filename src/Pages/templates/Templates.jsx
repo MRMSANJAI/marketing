@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import CustomButton from '../../components/button/button';
+import CustomButton from '../../Components/button/Button';
 import { FaPen } from 'react-icons/fa';
-import { Dropdown } from 'react-bootstrap';
+import Dropdown from 'react-bootstrap/Dropdown'
 import './Templates.css';
 import { IoMdArrowDropdown } from "react-icons/io";
 
@@ -32,7 +32,7 @@ const Templates = () => {
         BtnclassName = "add-layout-btn edi-pen-btn"
         BtnText = {<><FaPen/> Edit</>}
         />
-        <Dropdown>
+         <Dropdown>
       <Dropdown.Toggle variant="success" id="dropdown-basic" className='dro-dow-btn' >
         <IoMdArrowDropdown />
       </Dropdown.Toggle>
