@@ -11,7 +11,7 @@ const Ads = () => {
   const navigate = useNavigate();
 
   const clickAds = () => {
-    navigate('./ads/createads')
+    navigate('./createads')
   }
 
   const columns = [
