@@ -3,7 +3,10 @@ import React from "react";
 const Createads = () => {
     return (
         <div>
-<h1>create</h1>
+         <div>
+           <h1><input type="chechbox" /> Campaign name</h1> 
+
+         </div>
         </div>
     )
 }
