@@ -4,8 +4,15 @@ import Switch from 'react-switch'
 import './Ads.css';
 import { FaSearch} from 'react-icons/fa';
 import CustomButton from '../../Components/button/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Ads = () => {
+
+  const navigate = useNavigate();
+
+  const clickAds = () => {
+    navigate('./createads')
+  }
 
   const columns = [
     { Header: 'Off/On', accessor: 'isSwitchOn' },
@@ -45,6 +52,7 @@ const Ads = () => {
         Btntype = 'button'
         BtnclassName = 'add-layout-btn crea-btn'
         BtnText = '+ Create'
+        ClickEvent = {clickAds}
         />
          <Table columns={columns} data={data} />
       </div>
