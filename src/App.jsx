@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import React from 'react';
 import Login from './Pages/login/Login';
 import SetPassword from './Pages/setpassword/Setpassword';
 import './App.css'
@@ -11,8 +11,12 @@ import Compaigns from "./Pages/campaigns/Campaigns";
 import Profile from"./Pages/profile/Profile";
 import Templates from "./Pages/templates/Templates";
 import TargetAudience from "./Pages/targetaudience/TargetAudience";
+import Company from './Pages/companydetails/Company';
+import Createads from "./Pages/createads/Createads";
+import Addaudience from './Pages/addaudience/Addaudience';
+
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <BrowserRouter>
@@ -28,6 +32,11 @@ function App() {
       <Route path='/profile'element={<Authgaurd component={<Profile/>}/>}/>
       <Route path='/templates'element={<Authgaurd component={<Templates/>}/>}/>
       <Route path='/targetaudience'element={<Authgaurd component={<TargetAudience/>}/>}/>
+      <Route path='/ads/createads'element={<Createads/>}/>
+      <Route path='/company'element={<Authgaurd component={<Company/>}/>}/>
+      <Route path='/addaudience' element={<Addaudience />} />
+    
+
     </Routes>
   </div>
   </BrowserRouter>
