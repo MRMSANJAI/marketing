@@ -1,0 +1,99 @@
+.profile-container{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.profile-header h1{
+    font-size: 30px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    margin-left: 35px;
+}
+.editicon{
+    cursor: pointer;
+    margin-left: -30px;
+}
+.profile-icon p{
+    font-size: 320px;
+    font-weight: 100;
+    color: grey; 
+    margin-top: 140px;
+}
+.profile-info{
+    margin-left: 240px;
+    padding: 20px;
+    width: 650px;
+    height: 550px;
+    padding-left: 30px;
+    margin-right: 20px;
+    border: 1px solid rgb(194, 181, 181);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 17px;
+    margin-top: 70px;
+}
+.profile-info h1{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 10px;
+}
+.profile-info p{
+    font-size: 17px;
+    font-weight: 400;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top:10px;
+}
+.profile-info input{
+    width: 610px;
+    height: 35px;
+    border:1px solid grey;
+    border-radius: 5px;
+}
+.Buttonns{
+    margin-left: 405px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+.savebtn{
+    width: 95px;
+    height: 41px;
+    font-size: 13px;
+    background: rgb(19, 83, 143);
+}
+.cancelbtn{
+    width: 95px;
+    height: 41px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0, 0.2);
+    color: black;
+}
+.password-popup{
+    width: 680px;
+    height:450px;
+    position: absolute;
+    margin-top: -400px;
+    margin-left: -340px;
+    padding-left: 50px;
+    background: white;
+    border: 1px solid rgb(194, 181, 181);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius:13px;
+
+}
+.password-popup h2{
+   text-align: center;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight: 400;
+   font-size: 22px;
+   line-height: 10px;
+}
+.password-popup input{
+    width: 550px;
+    height: 31px;
+}
+.popup-buttons{
+    margin-left: 347px;
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap:25px;
+}

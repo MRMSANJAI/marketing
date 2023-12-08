@@ -1,0 +1,88 @@
+.template-page-cont{
+    margin-left: 70px;
+    width: 1120px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.tem-hea{
+    font-size: 28px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+.tem-hea-btn{
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+.bor-cont{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    align-items: center;
+}
+.cre-tem-btn{
+    width: 150px;
+    height: 40px;
+    background-color: steelblue;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.box-para{
+    border: 1px solid #999;
+    width: 50px;
+    height: 60px;
+    border-radius: 5px;
+}
+.che-box-para{
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+}
+.xyz-para{
+    color: steelblue;
+}
+.btn-cla-cont{
+    display: flex;
+    gap: 10px;
+    margin-left: 700px;
+    align-items: center;
+    justify-content: center;
+}
+.edi-pen-btn{
+    height: 30px;
+    width: 70px;
+    background-color: steelblue;
+    justify-content: center;
+    align-items: center;
+}
+.dro-men-box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);
+    width: 250px;
+    padding: 20px;
+    margin-top: 10px;
+    background-color: white;
+}
+.dro-dow-btn{
+    background-color: steelblue;
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+}
+.dro-items{
+    text-decoration: none;
+    color: #333;
+}

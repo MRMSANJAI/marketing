@@ -1,34 +1,36 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import Login from './Pages/login/Login';
+import SetPassword from './Pages/setpassword/Setpassword';
 import './App.css'
-
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import ResetPassword from './Pages/forgotpassword/Forgotpassword';
+import Start from './Pages/createanaccount/Createaccount';
+import Authgaurd from './Components/Authgaurd';
+import Ads from './Pages/ads/Ads';
+import Compaigns from "./Pages/campaigns/Campaigns";
+import Profile from"./Pages/profile/Profile";
+import Templates from "./Pages/templates/Templates";
+import TargetAudience from "./Pages/targetaudience/TargetAudience";
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <BrowserRouter>
+  <div>
+    <Routes>
+      <Route path='/'element={<Login/>}/>
+      <Route path='/forgotpassword'element={<ResetPassword/>}/>
+      <Route path='/resetpassword'element={<SetPassword/>}/>
+      <Route path='/start'element={<Start/>}/>
+      <Route path='/home'element={<Authgaurd/>}/>
+      <Route path='/campaigns'element={<Authgaurd component={<Compaigns/>}/>}/>
+      <Route path='/ads'element={<Authgaurd component={<Ads/>}/>}/>
+      <Route path='/profile'element={<Authgaurd component={<Profile/>}/>}/>
+      <Route path='/templates'element={<Authgaurd component={<Templates/>}/>}/>
+      <Route path='/targetaudience'element={<Authgaurd component={<TargetAudience/>}/>}/>
+    </Routes>
+  </div>
+  </BrowserRouter>
   )
 }
 

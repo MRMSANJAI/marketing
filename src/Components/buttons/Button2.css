@@ -1,0 +1,10 @@
+.add-login-btn{
+    background-color:#fff;
+    color:  rgb(19, 83, 143);
+    border: 1px transparent;
+    border-radius: 5px;
+    align-items: center;
+    border: 1px solid white;
+    box-shadow: 2px 2px 2px 4px rgba(0,0,0, 0.2);
+   
+}
