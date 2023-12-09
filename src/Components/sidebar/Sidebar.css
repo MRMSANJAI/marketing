@@ -1,6 +1,5 @@
 .side-container{
     width: 100px;
-    height: 750px;
     border: 1px solid rgb(194, 181, 181);
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     max-width: 300px; 
@@ -32,9 +31,9 @@
         font-size: 25px; 
     }
 }
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 1000px) {
     .side-container {
-        max-height: 750px;
+        max-height: 960px;
     }
     .sidelogo {
         font-size: 25px;
