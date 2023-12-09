@@ -21,6 +21,10 @@
     color: steelblue;
     
 }
+.heading1 p{
+    font-size: 15px;
+    width: 200px;
+}
 .company{
     display: flex;
     width: 100%;
@@ -66,4 +70,23 @@
 .Droplist-content{
     text-decoration: none;
     color: black;
+}
+
+.Dropdown-container {
+    max-width: 300px; 
+    max-height: 200px; 
+}
+@media (max-width: 768px) {
+   
+    .Dropdown-container {
+        max-width: 250px; 
+        max-height: 150px; 
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .Dropdown-container {
+        max-width: 280px;
+        max-height: 180px;
+    }
 }

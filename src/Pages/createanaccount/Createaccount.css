@@ -53,3 +53,19 @@
     width: 370px;
     height: 39px;
 }
+.head2 input {
+    max-width: 100%;
+    max-height: 100px; 
+}
+@media (min-width: 769px) and (max-width: 1200px) {
+  
+    .head2 input {
+        max-width: 90%; 
+        max-height: 90px; 
+    }
+
+    .checkbox1 {
+        max-width: 280px; 
+        max-height: 180px; 
+    }
+}
