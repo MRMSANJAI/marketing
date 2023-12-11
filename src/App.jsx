@@ -37,7 +37,7 @@ function App() {
       <Route path='/createads'element={<Authgaurd component={<Createads/>}/>}/>
       <Route path='/company'element={<Authgaurd component={<Company/>}/>}/>
       <Route path='/addaudience' element={<Authgaurd component={<Addaudience/>} />} />
-    
+      <Route path='/charts'element={<Authgaurd component={<Charts/>}/>}/>    
 
     </Routes>
   </div>
