@@ -34,7 +34,7 @@ function App() {
       <Route path='/targetaudience'element={<Authgaurd component={<TargetAudience/>}/>}/>
       <Route path='/createads'element={<Createads/>}/>
       <Route path='/company'element={<Authgaurd component={<Company/>}/>}/>
-      <Route path='/addaudience' element={<Addaudience />} />
+      <Route path='/addaudience' element={<Authgaurd component={<Addaudience/>} />} />
     
 
     </Routes>
