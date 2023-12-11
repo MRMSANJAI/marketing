@@ -1,0 +1,114 @@
+.cre-ads-cont{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    height: 100%;
+    width: 100%;
+    margin-left: 100px;
+}
+.che-par-cont{
+    border: 2px solid #bbb;
+    width: 800px;
+    height: 110px;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.camp-nam-head{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+.dr-do-bt-ac{
+    width: 800px;
+    height: 40px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1.5px solid #bbb;
+    border-radius: 5px;
+}
+.ad-nam-cont{
+    border: 2px solid #bbb;
+    width: 800px;
+    height: 110px;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.sel-temp-cont{
+    border: 2px solid #bbb;
+    width: 800px;
+    height: 600px;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.set-atb-cont{
+    display: flex;
+    justify-content: space-between;
+}
+.sea-exi-inp{
+    width: 600px;
+    height: 40px;
+    padding: 8px 30px 8px 30px;
+    border: 1.5px solid #999;
+    border-radius: 5px;
+
+}
+.add-temp-btn{
+    width: 150px;
+    height: 40px;
+    background-color: steelblue;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 16px;
+}
+.sea-inp-par{
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+.sear-bar-ico{
+    position: absolute;
+    color: #111;
+    left: 10px;
+    transform: translateY(70%);
+}
+.che-aut-bar-cont{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    align-items: center; 
+}
+.che-par-con{
+    display: flex;
+    gap: 10px;
+    margin-left: 10px;
+}
+.xyz-temp{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    color: steelblue;
+}
+.btn-edit{
+    margin-left: 430px;
+}
+.edi-pen-btn{
+    width: 70px;
+    height: 40px;
+}
+.rep-cont{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.add-camp-btns{
+    width: 150px;
+    height: 40px;
+    margin-left: 900px;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: steelblue;
+}

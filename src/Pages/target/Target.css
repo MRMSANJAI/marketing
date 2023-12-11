@@ -26,11 +26,12 @@
     width: 175px;
     font-size: 17px;
     font-weight: 300;
-    text-align: left;   
+    text-align: left; 
+      
 }
 .headingbar{
     margin-left: 20px;
-    margin-top:-30px;
+    margin-top:-50px;
     text-align: left;
 }
 .headingbar h4{
@@ -45,4 +46,8 @@
     width: 80px;
     height:40px;
     margin-left: 50px;
+}
+.ttable{
+    margin-left: 40px;
+    
 }

@@ -1,0 +1,21 @@
+.nav-bar-cont{
+    width: 1200px;
+    height: 60px;
+    background-color: #fff;
+    border-bottom: 2px solid #bbb;
+    padding: 10px;
+}
+.ord-lis-nav{
+    display: flex;
+    gap: 50px;
+    text-decoration: none;
+}
+.camp-list{
+    list-style: none;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+.camp-list:hover, .camp-list:active {
+    border-bottom:5px solid steelblue;
+}
