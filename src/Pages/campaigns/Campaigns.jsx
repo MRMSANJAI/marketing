@@ -28,6 +28,9 @@ const handleCancelCampaign = () => {
 const handleClick = () =>{
      navigate('./charts')
 }
+const handleAddaudience = () => {
+  navigate('./addaudience')
+}
 
   return (
     <div className='donw'>
@@ -42,7 +45,7 @@ const handleClick = () =>{
       </div>
       <div className='deri'>
       <div>
-<button className="btnc" onClick={ handleAddCampaign}>+ Create</button>
+<button className="btnc" onClick={handleAddaudience }>+ Create</button>
 <div style={{borderRadius:"10px"}}>
 
 <table className="tables" >
@@ -68,32 +71,32 @@ const handleClick = () =>{
         <input className="boc"type="text"/>
         <div className="btnvalue">
             <h4>Use a New Campaings objectives</h4>
-          <div className="top">  <div class="row">
+          <div className="top">  <div className="row">
     <input className="btnr"type="radio"  id="awareness" name="campaignObjective" value="awareness"/>
     <div  className="icon" ><HiSpeakerphone /></div>
     <label for="awareness">Awareness</label>
   </div>
-  <div class="row">
+  <div className="row">
     <input className="btnr"type="radio" id="traffic" name="campaignObjective" value="traffic"/>
     <div  className="icon"><FaMousePointer /></div>
     <label for="traffic">Traffic</label>
   </div>
-  <div class="row">
+  <div className="row">
     <input className="btnr"type="radio" id="engagement" name="campaignObjective" value="engagement"/>
   <div  className="icon">  <FaMessage /></div>
     <label for="engagement">Engagement</label>
   </div>
-  <div class="row">
+  <div className="row">
     <input className="btnr"type="radio" id="leads" name="campaignObjective" value="leads"/>
   <div  className="icon"> <FaFilter /></div> 
     <label for="leads">Leads</label>
   </div>
-  <div class="row">
+  <div className="row">
     <input className="btnr"type="radio" id="app promotion" name="campaignObjective" value="app promotion"/>
    <div  className="icon"><MdGroups2 /></div>
     <label for="app promotion">App Promotion</label>
   </div>
-  <div class="row">
+  <div className="row">
     <input className="btnr"type="radio" id="Sales" name="campaignObjective" value="Sales"/>
    <div className="icon"> <IoBag /></div>
     <label for="sales">Sales</label>

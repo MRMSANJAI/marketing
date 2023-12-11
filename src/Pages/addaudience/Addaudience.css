@@ -1,0 +1,120 @@
+ .container1{
+
+    border: 2px solid grey;
+    border-radius: 10px;
+    height: 15%;
+    width: 800px;  
+    padding-bottom: 3%;
+    padding-left: 2%;
+    box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.182);
+}
+.container2{
+    border: 2px solid grey;
+    border-radius: 10px;
+    width: 800px;
+   margin-top: 6%;
+   padding-left: 2%;
+   padding-bottom: 3%;
+   box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.182);
+}
+.container3{
+    border: 2px solid grey;
+    border-radius: 10px;
+    width: 800px;
+    margin-top: 6%;
+    padding-left: 2%;
+    box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.182);
+}
+.cont{
+    border: 1px solid rgb(196, 181, 200) ;
+    border-radius: 8px;
+    width: 95%;
+    height: 80px;
+    padding-left: 1%;
+    background-color: rgba(214, 225, 229, 0.441);
+}
+.boxes{
+    padding-left: 15%;
+    padding-top: 3%;
+}
+.inbtn{
+    width: 95%;
+    height: 38px;
+    border-radius: 5px;
+}
+
+.texts{
+    border: 2px solid grey; 
+    width: 25%;
+   height: 37px;
+   border-radius: 6px;
+}
+.Rs{
+    border: 2px solid grey; 
+    width: 25%;
+    margin-left: 30%;
+    height: 37px;
+    border-radius: 6px;
+ 
+}
+.starts{
+    padding-left: 1%;
+}
+.dates{
+    margin-left: 1%;
+    width: 25%;
+    height: 37px;
+    border-radius: 6px;
+    padding-left: 1%;
+}
+.check{
+    display: flex;
+  padding-bottom: 2%;
+  padding-left: 1%;
+  font-size: 15px;
+}
+.dne{
+    padding-left: 1%;
+}
+/* .circleStyle  {
+    width: 50px;
+    height:50px;
+    border-radius:50%;
+    background-color: rgb(16, 170, 232);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  } */
+   .ffff{
+    font-size: 16px;
+    padding-left: 2%;
+  }
+  .sixess{
+    transform: scale(2.3);
+  }
+   .btnadd{
+    height: 50px;
+    width: 800px;
+    margin-top: 5%;
+    background-color: #1a47a1dc;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  .campi{
+    margin-bottom: 9%;
+    margin-top: 6%;
+    border: 1px solid black;
+    height: 60px;
+    width: 250px;
+    border-radius: 7px;
+    background-color: rgba(26, 71, 161, 0.864);
+    cursor: pointer;
+   
+  }
+  .btnca{
+    display: flex;
+    justify-content: end;
+    width: 1100px;
+   
+  }    
