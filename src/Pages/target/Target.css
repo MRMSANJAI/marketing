@@ -4,7 +4,7 @@
 }
 .targot-content h2{
    font-size: 24px;
-   
+   font-weight: 400;
 }
 .filters-content{
     display: flex;
@@ -15,6 +15,10 @@
     padding: 10px;
     border: 1px solid gray;
     background: white;
+}
+.filters-content h3{
+    font-size: 19px;
+    font-weight: 500;
 }
 .ddbutton{
     background: white;
