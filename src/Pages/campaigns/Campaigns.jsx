@@ -37,7 +37,24 @@ const handleCancelCampaign = () => {
       <div className='deri'>
       <div>
 <button className="btnc" onClick={ handleAddCampaign}>+ Create</button>
-{showAddCampaignpopup &&(
+<div style={{borderRadius:"10px"}}>
+
+<table className="tables" >
+      <thead className="tablehead">
+        <tr className="th">
+          <th>On/Off</th>
+          <th className="card4">Campaign</th>
+          <th className="card3">delivery</th>
+          <th className="card">Bid Stradegy</th>
+          <th className="card2">Budget</th>
+          <th className="card">Result</th>
+        </tr>
+      </thead>
+      <tbody className="blue"  >
+        <tr>
+          <td  className="btnon"><FaToggleOff /> </td>
+          <td className="peri ,colo" >New Traffic Campaign <div className="vied"> <VscGraph /><button>View chat</button> <MdModeEditOutline /><button className='update' onClick={ handleAddCampaign}>Edit</button>
+          {showAddCampaignpopup &&(
   <div className="aling">
   <div class="container">
         <h2 className="camp">Create New Campaings</h2>
@@ -86,21 +103,7 @@ const handleCancelCampaign = () => {
     </div>
     </div>
 )}
-<table className="tables">
-      <thead className="tablehead">
-        <tr className="th">
-          <th>On/Off</th>
-          <th className="card4">Campaign</th>
-          <th className="card3">delivery</th>
-          <th className="card">Bid Stradegy</th>
-          <th className="card2">Budget</th>
-          <th className="card">Result</th>
-        </tr>
-      </thead>
-      <tbody className="blue"  >
-        <tr>
-          <td  className="btnon"><FaToggleOff /> </td>
-          <td className="peri ,colo" >New Traffic Campaign <div className="vied"> <VscGraph /><p>View chat</p> <MdModeEditOutline /><p>Edit</p></div> </td>
+          </div> </td>
           <td className="peri"> <input type="radio"/> In draft</td>
           <td className="peri">Used ad set</td>
           <td className="peri">Used ad set</td>
@@ -170,7 +173,8 @@ const handleCancelCampaign = () => {
       </tbody>
       
     </table>
-   
+    </div>
+
     </div>
       </div>
     </div>
