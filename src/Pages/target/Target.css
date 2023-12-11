@@ -1,0 +1,27 @@
+.targot-content{
+    margin-left: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.targot-content h2{
+   font-size: 24px;
+   
+}
+.filters-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 200px;
+    height: 370px;
+    padding: 10px;
+    border: 1px solid gray;
+    background: white;
+}
+.ddbutton{
+    background: white;
+    border: none;
+    width: 175px;
+    font-size: 17px;
+    font-weight: 300;
+    text-align: left;
+    
+}
