@@ -10,7 +10,7 @@ import { FaMessage } from 'react-icons/fa6';
 import { FaFilter } from 'react-icons/fa';
 import { MdGroups2 } from 'react-icons/md';
 import { IoBag } from 'react-icons/io5';
-
+import { useNavigate } from 'react-router-dom';
 const Campaigns = () => {
 
   const [showAddCampaignpopup,setShowAddCampaign] = useState(false);
@@ -21,6 +21,12 @@ const handleAddCampaign =()=>{
 
 const handleCancelCampaign = () => {
   setShowAddCampaign(false);
+}
+
+  const navigate = useNavigate();
+
+const handleClick = () =>{
+     navigate('./charts')
 }
 
   return (
@@ -53,7 +59,7 @@ const handleCancelCampaign = () => {
       <tbody className="blue"  >
         <tr>
           <td  className="btnon"><FaToggleOff /> </td>
-          <td className="peri ,colo" >New Traffic Campaign <div className="vied"> <VscGraph /><button>View chat</button> <MdModeEditOutline /><button className='update' onClick={ handleAddCampaign}>Edit</button>
+          <td className="peri ,colo" >New Traffic Campaign <div className="vied"> <VscGraph /><button className='update' onClick={handleClick}>View chat</button> <MdModeEditOutline /><button className='update' onClick={ handleAddCampaign}>Edit</button>
           {showAddCampaignpopup &&(
   <div className="aling">
   <div class="container">
