@@ -1,9 +1,9 @@
 import React from 'react';
-import "./Chart.css";
+import "./Charts.css";
 const Charts = () => {
   return (
     <div>
-      
+      <h1>logo</h1>
     </div>
   );
 }
