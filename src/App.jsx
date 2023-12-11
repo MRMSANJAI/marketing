@@ -16,6 +16,7 @@ import Createads from "./Pages/createads/Createads";
 import Addaudience from './Pages/addaudience/Addaudience';
 import Target from './Pages/target/Target';
 import Charts from './Pages/charts/Charts';
+import Addaudience2 from './Pages/addaudience2/Addaudience2'
 
 function App() {
   
@@ -38,7 +39,8 @@ function App() {
       <Route path='/createads'element={<Authgaurd component={<Createads/>}/>}/>
       <Route path='/company'element={<Authgaurd component={<Company/>}/>}/>
       <Route path='/Campaigns/addaudience' element={<Authgaurd component={<Addaudience/>} />} />
-      <Route path='/campaigns/charts'element={<Authgaurd component={<Charts/>}/>}/>    
+      <Route path='/campaigns/charts'element={<Authgaurd component={<Charts/>}/>}/> 
+      <Route path='/addaudience2'element={<Authgaurd component={<Addaudience2/>}/>}/>   
 
     </Routes>
   </div>
