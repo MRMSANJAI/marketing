@@ -15,6 +15,7 @@ import Company from './Pages/companydetails/Company';
 import Createads from "./Pages/createads/Createads";
 import Addaudience from './Pages/addaudience/Addaudience';
 import Target from './Pages/target/Target';
+import Charts from './Pages/charts/Charts';
 
 function App() {
   
