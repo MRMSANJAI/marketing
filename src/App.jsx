@@ -14,6 +14,7 @@ import TargetAudience from "./Pages/targetaudience/TargetAudience";
 import Company from './Pages/companydetails/Company';
 import Createads from "./Pages/createads/Createads";
 import Addaudience from './Pages/addaudience/Addaudience';
+import Target from './Pages/target/Target';
 
 function App() {
   
@@ -27,12 +28,13 @@ function App() {
       <Route path='/resetpassword'element={<SetPassword/>}/>
       <Route path='/start'element={<Start/>}/>
       <Route path='/home'element={<Authgaurd/>}/>
+      <Route path='/target'element={<Authgaurd component={<Target/>}/>}/>
       <Route path='/campaigns'element={<Authgaurd component={<Compaigns/>}/>}/>
       <Route path='/ads'element={<Authgaurd component={<Ads/>}/>}/>
       <Route path='/profile'element={<Authgaurd component={<Profile/>}/>}/>
       <Route path='/templates'element={<Authgaurd component={<Templates/>}/>}/>
       <Route path='/targetaudience'element={<Authgaurd component={<TargetAudience/>}/>}/>
-      <Route path='/createads'element={<Createads/>}/>
+      <Route path='/createads'element={<Authgaurd component={<Createads/>}/>}/>
       <Route path='/company'element={<Authgaurd component={<Company/>}/>}/>
       <Route path='/addaudience' element={<Authgaurd component={<Addaudience/>} />} />
     
