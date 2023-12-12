@@ -17,6 +17,11 @@ import Addaudience from './Pages/addaudience/Addaudience';
 import Target from './Pages/target/Target';
 import Charts from './Pages/charts/Charts';
 import Addaudience2 from './Pages/addaudience2/Addaudience2'
+import Campaignscharts from './Components/chartdata/compaigncharts/Campaignschart';
+import Customconversion from './Components/chartdata/customconversion/Customconversion';
+import Adsets from './Components/chartdata/adsetschart/Adsets';
+import Adscharts from './Components/chartdata/adscharts/Adscharts';
+import Demographiccharts from'./Components/chartdata/demographicchart/Demographicchart';
 
 function App() {
   
@@ -41,6 +46,11 @@ function App() {
       <Route path='/Campaigns/addaudience' element={<Authgaurd component={<Addaudience/>} />} />
       <Route path='/campaigns/charts'element={<Authgaurd component={<Charts/>}/>}/> 
       <Route path='/addaudience2'element={<Authgaurd component={<Addaudience2/>}/>}/>   
+      <Route path='/campaignscharts'element={<Authgaurd component={<Campaignscharts/>}/>}/>
+      <Route path='/customconversion'element={<Authgaurd component={<Customconversion/>}/>}/>
+      <Route path='/adsets'element={<Authgaurd component={<Adsets/>}/>}/>
+      <Route path='/adscharts'element={<Authgaurd component={<Adscharts/>}/>}/>
+      <Route path ='/Demographicchart'element={<Authgaurd component={<Demographiccharts/>}/>}/>
 
     </Routes>
   </div>
