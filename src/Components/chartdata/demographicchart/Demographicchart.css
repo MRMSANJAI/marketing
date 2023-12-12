@@ -1,6 +1,7 @@
 .demographic-container{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin-left: 50px;
+    width: 100%;
 }
 .Gender-container h4{
     font-size: 23px;
@@ -70,4 +71,20 @@
     margin-top: -59px;
     font-size: 23px;
     font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+    .Gender-container,
+    .CTR-container,
+    .Age-container {
+      width: 100%; 
+      margin-top: 20px;
+      height: auto; 
+    }
+    .Gender-container p,
+  .CTR-container p,
+  .Age-container p {
+    margin-left: 20px; 
+    margin-top: 10px; 
+    font-size: 18px; 
+  }
 }
