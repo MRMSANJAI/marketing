@@ -1,15 +1,15 @@
 .bottom-chart-container{
     display: flex;
     flex-direction: row;
-    gap: 60px;
+    gap: 50px;
     margin-top: 20px;
-    padding: 30px
+    padding: 20px
 }
 .bottomcontent{
     background: white;
     border: 1px solid rgb(194, 181, 181);
     box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2);
-    width: 155px;
+    width: 170px;
     height: 180px;
     border-radius: 10px;
 }
@@ -19,6 +19,7 @@
     font-weight: 600;
 }
 .bottomcontent h5{
+    margin-left: 5px;
     font-size: 14px;
     text-align: left;
     margin-top: 10px;
