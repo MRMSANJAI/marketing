@@ -17,9 +17,6 @@
     cursor: pointer;
     color: #111;
 }
-.camp-list:hover {
-    border-bottom:5px solid steelblue;
-}
-.camp-list:active {
+.camp-list:hover, .camp-list.active-link {
     border-bottom:5px solid steelblue;
 }
