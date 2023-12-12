@@ -8,10 +8,10 @@ const Charts = () => {
         <nav>
           <ul className='ord-lis-nav'>
             <Link to= "/campaignscharts"className='camp-list'>Campaign</Link>
-            <Link to = "/adsetscharts"className='camp-list'>AdSets</Link>
+            <Link to = "/adsets"className='camp-list'>AdSets</Link>
             <Link to = "/adscharts"className='camp-list'>Ads</Link>
-            <Link to = "/demographiccharts"className='camp-list'>Demographic</Link>
-            <Link href = "/customconversionscharts"className='camp-list'>Custom Conversions</Link>
+            <Link to = "/demographicchart"className='camp-list'>Demographic</Link>
+            <Link to = "/customconversion"className='camp-list'>Custom Conversions</Link>
           </ul>
         </nav>
       </div>

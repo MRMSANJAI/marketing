@@ -50,7 +50,7 @@ function App() {
       <Route path='/customconversion'element={<Authgaurd component={<Customconversion/>}/>}/>
       <Route path='/adsets'element={<Authgaurd component={<Adsets/>}/>}/>
       <Route path='/adscharts'element={<Authgaurd component={<Adscharts/>}/>}/>
-      <Route path ='/Demographicchart'element={<Authgaurd component={<Demographiccharts/>}/>}/>
+      <Route path ='/demographicchart'element={<Authgaurd component={<Demographiccharts/>}/>}/>
 
     </Routes>
   </div>
