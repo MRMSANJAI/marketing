@@ -21,11 +21,11 @@ const Charts = () => {
       <div className='nav-bar-cont'>
         <nav>
           <ul className='ord-lis-nav'>
-            <Link  className='camp-list' onClick={() => handleComponentChange('campaignCharts')}>Campaign</Link>
-            <Link  className='camp-list' onClick={() => handleComponentChange('adSets')}>AdSets</Link>
-            <Link  className='camp-list' onClick={() => handleComponentChange('adsCharts')} >Ads</Link>
-            <Link  className='camp-list' onClick={() => handleComponentChange('demographicChart')}>Demographic</Link>
-            <Link  className='camp-list'onClick={() => handleComponentChange('customConversion')} >Custom Conversions</Link>
+            <Link  className={`camp-list ${selectedComponent === 'campaignCharts' ? 'active-link' : ''}`} onClick={() => handleComponentChange('campaignCharts')}>Campaign</Link>
+            <Link  className={`camp-list ${selectedComponent === 'adSets' ? 'active-link' : ''}`} onClick={() => handleComponentChange('adSets')}>AdSets</Link>
+            <Link  className={`camp-list ${selectedComponent === 'adsCharts' ? 'active-link' : ''}`} onClick={() => handleComponentChange('adsCharts')} >Ads</Link>
+            <Link  className={`camp-list ${selectedComponent === 'demographicChart' ? 'active-link' : ''}`} onClick={() => handleComponentChange('demographicChart')}>Demographic</Link>
+            <Link  className={`camp-list ${selectedComponent === 'customConversion' ? 'active-link' : ''}`} onClick={() => handleComponentChange('customConversion')} >Custom Conversions</Link>
           </ul>
         </nav>
       </div>
