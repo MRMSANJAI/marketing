@@ -73,7 +73,7 @@ const Campaignschart = () => {
     />
       </div>
       </div>
-      <div style={{display:"flex",gap:"40px",marginTop:"50px"}}>
+      <div style={{display:"flex",gap:"25px",marginTop:"50px"}}>
       <Box title="Clicks" value="85" />
       <Box title="Impressions" value="3,898" />
       <Box title="Average CPC" value="2.68" />
