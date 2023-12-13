@@ -1,6 +1,6 @@
 .template-page-cont{
     margin-left: 70px;
-    width: 1120px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 20px;
