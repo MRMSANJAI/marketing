@@ -3,16 +3,12 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import { MdArrowDropDown } from "react-icons/md";
 import { FaFacebook,FaTwitter ,FaLinkedinIn ,FaLink } from "react-icons/fa";
 import "./Company.css";
-import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import { Tab,Row,Col,Nav } from 'react-bootstrap';
+
 
 
 
 const Company = () => {
-  const { children, value, index, ...other } = props;
   return (
     <div className='company-details'>
         <div className='company-container'>
