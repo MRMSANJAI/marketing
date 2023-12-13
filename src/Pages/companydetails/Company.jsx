@@ -3,12 +3,16 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import { MdArrowDropDown } from "react-icons/md";
 import { FaFacebook,FaTwitter ,FaLinkedinIn ,FaLink } from "react-icons/fa";
 import "./Company.css";
-import { Tab, Row, Col, Nav } from 'react-bootstrap';
+import PropTypes from 'prop-types';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 
 
 const Company = () => {
-
+  const { children, value, index, ...other } = props;
   return (
     <div className='company-details'>
         <div className='company-container'>
@@ -78,6 +82,7 @@ const Company = () => {
         <div className='Ttable-container'>
            <div className='Tab-content'>
              <h3>insights</h3> 
+             
              <Tab.Container id="left-tabs-example" defaultActiveKey="first">
              <Row>
                 <Col sm={3}>
