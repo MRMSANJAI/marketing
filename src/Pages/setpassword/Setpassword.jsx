@@ -1,6 +1,6 @@
 import React from "react";
 import CustomButton from "../../Components/button/Button";
-import './SetPassword.css'
+import './Setpassword.css';
 import LoginButton from "../../Components/buttons/Button2";
 
 const SetPassword = () => {
