@@ -3,10 +3,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .ads-head{
     font-weight: 400;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-family: 14px;
 }
 .sea-inp-bar{

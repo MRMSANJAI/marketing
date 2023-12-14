@@ -1,5 +1,4 @@
 .chartline{
-    
     height: 380px;
     width: 350px;
    margin-left: 50px;
@@ -18,9 +17,9 @@
 .proger{
     display: flex;
 }
-/* .bacc{
-    background-color: rgba(128, 128, 128, 0.558);
-} */
+ .bacc{
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
 .underlinetext{
     text-decoration: underline;
     color: blue;
@@ -28,7 +27,6 @@
 .custom-table {
     border-collapse: collapse;
     width: 100%;
-    /* border: 1px solid #ccc; */
     border-radius: 7px;
   }
   
@@ -70,6 +68,10 @@
     border: 2px solid rgba(175, 174, 174, 0.744);
     border-radius: 3px;
      width: 1300px;
-  padding-bottom: 60px;
+    padding-bottom: 60px;
     padding-right: 20px;
+  }
+  .chartline h2{
+    font-size: 23px;
+    font-weight: 600;
   }
