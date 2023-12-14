@@ -1,0 +1,16 @@
+.insigttable{
+    padding: 100px;
+}
+.borderinsigt{
+
+    border: 1px solid rgba(105, 102, 102, 0.871);
+    width: 1000px;
+    border-radius: 7px;
+    box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.182);
+}
+.widttable{
+    width: 200px;
+    height: 40px;
+    box-shadow: 1px 6px 8px rgba(23, 22, 22, 0.459);
+    border:1px solid rgb(124, 116, 116);
+}

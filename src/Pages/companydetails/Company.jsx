@@ -1,14 +1,22 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { MdArrowDropDown } from "react-icons/md";
 import { FaFacebook,FaTwitter ,FaLinkedinIn ,FaLink } from "react-icons/fa";
 import "./Company.css";
-import { Tab, Row, Col, Nav } from 'react-bootstrap';
+import Jobposition from "../../Components/jobposition/Jobposition";
+import News from "../../Components/news/News";
+import Fundingrounds from "../../Components/fundingrounds/Fundingrounds";
+import Technologies from "../../Components/technologies/technologies";
+import Empolyeetrend from "../../Components/employeetrend/Empolyeetrend";
 
 
 
 const Company = () => {
+  const [selectedHeading, setSelectedHeading] = useState(null);
 
+  const handleHeadingClick = (heading) => {
+    setSelectedHeading(heading);
+  }
   return (
     <div className='company-details'>
         <div className='company-container'>
@@ -78,48 +86,45 @@ const Company = () => {
         <div className='Ttable-container'>
            <div className='Tab-content'>
              <h3>insights</h3> 
-             <Tab.Container id="left-tabs-example" defaultActiveKey="first">
-             <Row>
-                <Col sm={3}>
-          <Nav variant="pills" className="flex-column">
-            <Nav.Item >
-              <Nav.Link eventKey="first">Techonologies</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="second">Funding Rounds</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="third">Job Posting</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="fourth">News</Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="fifth">Employee Trend</Nav.Link>
-            </Nav.Item>
-          </Nav>
-        </Col>
-        <Col sm={9}>
-          <Tab.Content>
-          <Tab.Pane eventKey="first">
-                <p>Techonology insight Settings</p>
-                <p>Ai</p>
-                <p>CloudFare hosting</p>
-                <p>CloudFare DNS</p>
-                <p>Facebook Custom Audience</p>
-            </Tab.Pane>
-            <Tab.Pane eventKey="second">
-              <div>
-                <p>Funding Round Insights</p>
-                <p>Insight 1</p>
-                <p>Insight 2</p>
-              </div>
-            </Tab.Pane>
-          </Tab.Content>
-         
-        </Col>
-      </Row>
-    </Tab.Container>
+             <div className="borderinsigt">
+      <tables >
+        <thead className="insigttable">
+          <tr>
+            <th className="widttable" onClick={() => handleHeadingClick('Heading 1')}>Technologies</th>
+            {selectedHeading === 'Heading 1' && <Technologies />}
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td className="widttable" onClick={() => handleHeadingClick('Heading 2')}>Fundingrounds
+            </td>
+
+            {selectedHeading === 'Heading 2' && <Fundingrounds />}
+
+
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td className="widttable" onClick={() => handleHeadingClick('Heading 3')}>Job Posting</td>
+            {selectedHeading === 'Heading 3' && <Jobposition />}
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td className="widttable" onClick={() => handleHeadingClick('Heading 4')}>News</td>
+            {selectedHeading === 'Heading 4' && <News />}
+          </tr>
+        </tbody>
+        <tbody>
+          <tr>
+            <td className="widttable" onClick={() => handleHeadingClick('Heading 5')}>Empolyeetrend</td>
+            {selectedHeading === 'Heading 5' && <Empolyeetrend />}
+          </tr>
+        </tbody>
+      </tables>
+    </div>
   </div>
   </div> 
 </div>
