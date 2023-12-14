@@ -3,7 +3,7 @@ import './Login.css';
 import CustomButton from "../../Components/button/Button";
 import LoginButton from '../../Components/buttons/Button2';
 import { Link, useNavigate } from 'react-router-dom';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../Components/firebase-config';
 
 const Login = () => {
@@ -18,8 +18,9 @@ const Login = () => {
 
     const login = async () => {
        try{
-        const user = await signInWithEmailAndPassword(auth,loginEmail,loginPassword);
-        console.log(user)
+        const user = await createUserWithEmailAndPassword(auth,loginEmail,loginPassword);
+        console.log("Login successful");
+        navigate('/home')
        } catch (error) {
         console.log(error.message);
        }
