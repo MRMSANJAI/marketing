@@ -19,7 +19,8 @@ const Login = () => {
     const login = async () => {
        try{
         const user = await signInWithEmailAndPassword(auth,loginEmail,loginPassword);
-        console.log(user)
+        console.log("Login successful");
+        navigate('/home')
        } catch (error) {
         console.log(error.message);
        }

@@ -4,11 +4,20 @@ import CustomButton from '../../Components/button/Button';
 import LoginButton from '../../Components/buttons/Button2';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../Components/firebase-config';
+import { useNavigate } from 'react-router-dom';
 
 const Start = () => {
 
+  const navigate = useNavigate();
+   const loginPage = () => {
+    navigate('/')
+   }
+
   const [registerEmail,setRegisterEmail] = useState("");
   const [registerPassword,setRegisterPassword] = useState("");
+
+  const [signoutEmail,setSignoutEmail] = useState("");
+  const [signoutPassword,setSignoutPassword] = useState("");
 
   const register = async () => {
     try{
@@ -47,6 +56,7 @@ const Start = () => {
           Btntypes="button"
            BtnclassNames="add-login-btn login"
            BtnTexts="Login"
+           ClickEvents = {loginPage}
            />
            
      </div>
