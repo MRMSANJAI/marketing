@@ -17,7 +17,13 @@ import Addaudience from './Pages/addaudience/Addaudience';
 import Target from './Pages/target/Target';
 import Charts from './Pages/charts/Charts';
 import Addaudience2 from './Pages/addaudience2/Addaudience2';
-
+// import insights from './Pages/insights/Insights';
+// import jobposition from './Components/jobposition/Jobposition';
+ import news from './Components/news/News';
+import Insights from './Pages/insights/Insights';
+import Technologies from './Components/technologies/technologies';
+import Empolyeetrend from './Components/employeetrend/Empolyeetrend';
+import News from './Components/news/News';
 
 function App () {
   
@@ -42,10 +48,11 @@ function App () {
       <Route path='/Campaigns/addaudience' element={<Authgaurd component={<Addaudience/>} />} />
       <Route path='/campaigns/charts'element={<Authgaurd component={<Charts/>}/>}/> 
       <Route path='/addaudience2'element={<Authgaurd component={<Addaudience2/>}/>}/>   
-     
     </Routes>
+    
   </div>
   </BrowserRouter>
+  
   )
 }
 
