@@ -41,7 +41,7 @@ const Customconversion = () => {
 />
      </div>
      <div className='chartline'>
-
+     <h2 className='events'>   Events</h2>
      <BarChart
       xAxis={[{ scaleType: 'band', data: ['Desktop', 'Mobile'] }]}
       series={[{ data: [10,20] },  ]}
