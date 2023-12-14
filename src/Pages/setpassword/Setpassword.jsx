@@ -2,8 +2,15 @@ import React from "react";
 import CustomButton from "../../Components/button/Button";
 import './Setpassword.css';
 import LoginButton from "../../Components/buttons/Button2";
+import { useNavigate } from "react-router-dom";
 
 const SetPassword = () => {
+
+    const navigate = useNavigate();
+    
+    const loginPage = () => {
+        navigate('/')
+    }
     return (
         <div className="reset-password-container">
             <div className="res-pass-cont">
@@ -29,6 +36,7 @@ const SetPassword = () => {
                         Btntypes="button"
                         BtnclassNames="add-login-btn log-btn"
                         BtnTexts="Login"
+                        ClickEvents = {loginPage}
                     />
                 </div>
             </div>
