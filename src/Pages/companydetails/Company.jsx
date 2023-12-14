@@ -15,7 +15,6 @@ const Company = () => {
   const handleHeadingClick = (heading) => {
     setSelectedHeading(heading);
   }
-
   return (
     <div className='company-details'>
         <div className='company-container'>
@@ -82,27 +81,23 @@ const Company = () => {
                   <p>1912</p>
                 </div>
         </div>
+        
         <div className='Ttable-container'>
            <div className='Tab-content'>
-             <h3>insights</h3> 
-
+             <h3>Insights</h3> 
              <div className="borderinsigt">
       <tables >
         <thead className="insigttable">
           <tr>
             <th className="widttable" onClick={() => handleHeadingClick('Heading 1')}>Technologies</th>
             {selectedHeading === 'Heading 1' && <Technologies />}
-
           </tr>
         </thead>
         <tbody>
           <tr>
             <td className="widttable" onClick={() => handleHeadingClick('Heading 2')}>Fundingrounds
             </td>
-
             {selectedHeading === 'Heading 2' && <Fundingrounds />}
-
-
           </tr>
         </tbody>
         <tbody>
@@ -132,4 +127,5 @@ const Company = () => {
     
   );
 }
+
 export default Company;

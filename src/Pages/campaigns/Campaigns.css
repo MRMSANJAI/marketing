@@ -48,9 +48,9 @@
 width: 200x !important;
  }
  .btnc{
-  background-color: rgba(16, 49, 233, 0.74);
+  background-color: rgb(19, 83, 143);
+  color: #fff;
   margin-bottom: 30px;
-  color: aliceblue;
   font-size: 20px;
   margin-top: 20px;
   border-radius: 5px;
@@ -147,10 +147,8 @@ margin-bottom: 30px;
   margin-left: 300px;
 }
 .camp{
-  color: rgba(0, 89, 255, 0.884);
+  color:  rgb(19, 83, 143);
   font-size: 14px;
- 
-  
 }
 .aling{
   justify-content: center;
@@ -170,11 +168,15 @@ margin-bottom: 30px;
   border-radius: 7px; 
 }
 .donw{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-left: 2%;
 }
 .tappi{
   padding-right: 7%;
   margin-right: 10%;
 }
-
+.cam h3{
+  font-size: 23px;
+  font-weight: 600;
+}
 
