@@ -1,12 +1,12 @@
 .Target-container{
-    margin-left: 30px;
+    margin-left: 20px;
     margin-top: 20px;
     padding-left: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .Audience-heading h2{
     font-size: 23px;
-    font-weight: 400;
+    font-weight: 500;
 }
 .Target-btn{
     width: 170px;
