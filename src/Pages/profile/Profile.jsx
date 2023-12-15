@@ -17,6 +17,7 @@ const Profile = () => {
     setShowPasswordPopup(false);
   };
 
+
   return (
     <div className='Profile-container'style={{display:"flex"}}>
         <div className='profile-header'>
@@ -58,7 +59,7 @@ const Profile = () => {
                  Btntype="button"
                  BtnclassName="add-layout-btn savebtn"
                  BtnText="Save"
-                 onClick={handleSavePassword} 
+                 ClickEvent = {handleSavePassword} 
                 />
               </div>
             </div>
@@ -72,7 +73,8 @@ const Profile = () => {
           <CustomButton
            Btntype="button"
            BtnclassName="add-layout-btn savebtn"
-           BtnText="Save"/>
+           BtnText="Save"
+           />
        </div>
     </div>
   </div>
