@@ -15,7 +15,7 @@ const Ads = () => {
   }
 
   const columns = [
-    { Header: 'Off/On', accessor: 'isSwitchOn' },
+    { Header: 'Off/On', accessor: 'isSwitchOn'},
     { Header: 'Ad', accessor: 'campaignName' },
     { Header: 'Preview Link', accessor: 'deliveryStatus' },
     { Header: 'Bid Strategy', accessor: 'bidStrategy' },

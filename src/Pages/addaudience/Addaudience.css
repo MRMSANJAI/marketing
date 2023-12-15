@@ -1,27 +1,35 @@
+ .boxes{
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     padding-left: 15%;
+     padding-top: 3%;
+ }
+ .boxes h3 ,h4{
+  font-size: 18px;
+  font-weight: 600;
+ }
  .container1{
-
-    border: 2px solid grey;
+    border: 1px solid grey;
     border-radius: 10px;
     height: 15%;
     width: 800px;  
     padding-bottom: 3%;
     padding-left: 2%;
-    box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.182);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 .container2{
-    border: 2px solid grey;
-    border-radius: 10px;
-    width: 800px;
-   margin-top: 6%;
-   padding-left: 2%;
-   padding-bottom: 3%;
-   box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.182);
+   border: 2px solid grey;
+  border-radius: 10px;
+  width: 800px;
+  margin-top:30px;
+  padding-left: 2%;
+  padding-bottom: 3%;
+  box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.182);
 }
 .container3{
     border: 2px solid grey;
     border-radius: 10px;
     width: 800px;
-    margin-top: 6%;
+    margin-top:30px;
     padding-left: 2%;
     box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.182);
 }
@@ -29,26 +37,17 @@
     border: 1px solid rgb(196, 181, 200) ;
     border-radius: 8px;
     width: 95%;
-    height: 80px;
+    height: 70px;
     padding-left: 1%;
     background-color: rgba(214, 225, 229, 0.441);
 }
-.boxes{
-    padding-left: 15%;
-    padding-top: 3%;
-}
 .inbtn{
-    width: 95%;
-    height: 38px;
+    width: 750px;
+    height: 40px;
     border-radius: 5px;
 }
 
-.texts{
-    border: 2px solid grey; 
-    width: 25%;
-   height: 37px;
-   border-radius: 6px;
-}
+
 .Rs{
     border: 2px solid grey; 
     width: 25%;
@@ -56,6 +55,10 @@
     height: 37px;
     border-radius: 6px;
  
+}
+.famap{
+  gap: 5px;
+  padding-top: 7px;
 }
 .starts{
     padding-left: 1%;
@@ -76,51 +79,39 @@
 .dne{
     padding-left: 1%;
 }
-/* .circleStyle  {
-    width: 50px;
-    height:50px;
-    border-radius:50%;
-    background-color: rgb(16, 170, 232);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-  } */
-   .ffff{
+.ffff{
     font-size: 16px;
     padding-left: 2%;
-  }
-  .sixess{
+ }
+.sixess{
     transform: scale(2.3);
   }
    .btnadd{
+    font-size: 15px;
+    font-weight: 500;
     height: 50px;
     width: 800px;
-    margin-top: 5%;
-    background-color: #1a47a1dc;
+    margin-top:30px;
+    background-color: rgb(19, 83, 143);
+    color: #fff;
     border-radius: 7px;
     cursor: pointer;
-   
   }
   .campi{
-   
-    margin-top: 6%;
-    border: 1px solid black;
+    font-size: 15px;
+    font-weight: 500;
+    margin-top:30px;
     height: 60px;
     width: 250px;
     border-radius: 7px;
-    background-color: rgba(26, 71, 161, 0.864);
+    background-color: rgb(19, 83, 143);
+    color: #fff;
     cursor: pointer;
-    border-bottom: 2px solid black;
   }
   .btnca{
     display: flex;
     justify-content: end;
     width: 1100px;
-    
-    
-   
-   
   } 
   .bode{
     border-bottom: 2px solid black;

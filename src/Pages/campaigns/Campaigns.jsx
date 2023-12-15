@@ -11,6 +11,7 @@ import { FaFilter } from 'react-icons/fa';
 import { MdGroups2 } from 'react-icons/md';
 import { IoBag } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
+import { string } from 'prop-types';
 const Campaigns = () => {
 
   const [showAddCampaignpopup,setShowAddCampaign] = useState(false);
@@ -31,6 +32,20 @@ const handleClick = () =>{
 const handleAddaudience = () => {
   navigate('./addaudience')
 }
+
+const mongoose = require('mongoose') ;
+
+const campaignSchema = new mongoos.Schema({
+  title: String,
+  description: String,
+  audience: String, });
+
+  const Campaign = mongoose.model('Campaign', campaignSchema);
+
+
+  module.exports = Campaign ;
+
+
 
   return (
     <div className='donw'>

@@ -18,7 +18,7 @@ const Empolyeetrend =() => {
 <BarChart className="cherempl"
       xAxis={[{ scaleType: 'band', data: ['2022', '2023', ] }]}
       series={[{ data: [4, 3, 5] }, { data: [1, 6, 3] }, { data: [2, 5, 6] }]}
-      width={400}
+      width={600}
       height={300}
     />
 </div>

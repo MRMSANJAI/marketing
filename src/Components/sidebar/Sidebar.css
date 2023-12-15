@@ -5,6 +5,16 @@
     max-width: 300px; 
     max-height: 900px;
 }
+@media screen and (max-width: 600px) {
+    .side-container {
+        width: 50px ;
+    }
+}
+@media screen and (min-height: 1200px) {
+    .side-container {
+        max-height: 600px; 
+    }
+}
 .sidelogo{
     margin-top: 15px;
     font-size: 30px;
@@ -14,6 +24,15 @@
     padding-bottom: -40px;
     color: gray;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .sidelogo {
+        margin-top: 20px;
+        font-size: 25px;
+        margin-left: 10px;
+        flex-direction: column;
+        padding-bottom: -30px;
+    }
+}
 .nav-icons{
     margin-top: 120px;
     font-size: 35px;
@@ -22,20 +41,10 @@
     flex-direction: column;
     gap: 25px;
 }
-
-@media screen and (max-width: 768px) {
-    .side-container {
-        max-width: 150px; 
-    }
+@media screen and (min-width: 1025px) {
     .nav-icons {
-        font-size: 25px; 
-    }
-}
-@media screen and (max-height: 1000px) {
-    .side-container {
-        max-height: 960px;
-    }
-    .sidelogo {
-        font-size: 25px;
+        margin-top: 120px;
+        font-size: 35px;
+        gap: 25px;
     }
 }
