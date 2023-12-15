@@ -1,6 +1,6 @@
 .template-page-cont{
     margin-left: 70px;
-    width: 100%;
+    width: 1000px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -26,7 +26,8 @@
 .cre-tem-btn{
     width: 150px;
     height: 40px;
-    background-color: steelblue;
+    background-color: rgb(19, 83, 143);
+    color: #fff;
     font-size: 15px;
    
 }
@@ -42,6 +43,9 @@
     margin-left: 10px;
 }
 .xyz-para{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: steelblue;
 }
 .btn-cla-cont{
@@ -54,7 +58,9 @@
 .edi-pen-btn{
     height: 30px;
     width: 70px;
-    background-color: steelblue;
+    margin-left: 140px;
+    background-color: rgb(19, 83, 143);
+    color: #fff;
     justify-content: center;
     align-items: center;
 }
@@ -72,12 +78,12 @@
     background-color: white;
 }
 .dro-dow-btn{
-    background-color: steelblue;
-    color: white;
+    background-color: rgb(19, 83, 143);
+    color: #fff;
     border: transparent;
     border-radius: 5px;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     font-size: 24px;
     justify-content: center;
     align-items: center;
@@ -85,4 +91,18 @@
 .dro-items{
     text-decoration: none;
     color: #333;
+}
+
+@media screen and (min-width: 1025px) {
+    .template-page-cont {
+        margin-left: 70px;
+        width: 95%;
+        gap: 20px;
+    }
+    .tem-hea {
+        font-size: 28px;
+    }
+    .btn-cla-cont {
+        margin-left: 700px;
+    }
 }
