@@ -6,9 +6,6 @@ const Technologies =()=>{
     return(
 <div>
     <table className="techtable">
-    
-    
- 
   <tbody>
     <tr>
         <td>Technology Insight Settings</td>

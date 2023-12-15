@@ -1,13 +1,13 @@
 .employeeeflex{
     display: flex;
-gap: 100px;
-margin-bottom: -20px;
+    gap: 100px;
+    margin-bottom: -20px;
 }
 .employefe{
     display: flex;
     gap: 60px;
-margin-bottom: -20px;
-font-size: 13px;
+    margin-bottom: -30px;
+    font-size: 13px;
 }
 .cherempl{
     width: 200px;

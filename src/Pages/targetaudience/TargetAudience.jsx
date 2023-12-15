@@ -11,6 +11,9 @@ const Audience = () => {
   const handleClick =()=>{
     navigate('/Company');
   }
+  const editClick =()=>{
+    navigate('/target')
+  }
      
   const [showDropdown, setShowDropdown] = useState(false);
 
@@ -69,6 +72,7 @@ const Audience = () => {
            Btntype="button"
            BtnclassName="add-layout-btn Edit-btn"
            BtnText={<><MdEdit/>Edit</>}
+           ClickEvent={editClick}
             />
        <Dropdown>
           <Dropdown.Toggle variant="success" id="dropdown-basic" className='down-button'>
