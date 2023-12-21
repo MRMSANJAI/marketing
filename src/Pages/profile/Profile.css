@@ -1,6 +1,5 @@
 .profile-container{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width: 100%
 }
 .profile-header h1{
     font-size: 30px;
@@ -100,11 +99,11 @@
     gap:25px;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 400px) {
   .profile-icon p{
     font-size: 250px;
 }
 .profile-info {
-    margin-left: 120px;
+    margin-left: 200px;
 }
 }

@@ -14,7 +14,7 @@ const Profile = () => {
   const[lastname, setLastname] = useState('');
   const [email, setEmail]= useState('');
   const [password,setPassword]=useState('');
-  const [data,setData]=useState(null);
+  const [datas,setDatas]=useState(null);
   const navigate = useNavigate();
 
 
@@ -35,7 +35,7 @@ const Profile = () => {
     console.log (user)
     try{
       const response = await axios.post("http://localhost:3000/api/profileinfo",user)
-      setData(response.data);
+      setDatas(response.data);
       navigate('/home')
     }catch(error){
       console.log(error);
@@ -43,7 +43,7 @@ const Profile = () => {
   };
 
   return (
-    <div className='Profile-container'style={{display:"flex"}}>
+    <div className='profile-container'style={{display:"flex"}}>
         <div className='profile-header'>
             <h1>Profile</h1>
         </div>
