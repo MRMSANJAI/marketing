@@ -4,17 +4,42 @@ import { CgProfile } from 'react-icons/cg';
 import { MdEdit } from "react-icons/md";
 import CustomButton from '../../Components/button/Button';
 import LoginButton from '../../Components/buttons/Button2';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
 const Profile = () => {
   const [showPasswordPopup, setShowPasswordPopup] = useState(false);
+  const[firstname, setFirstname]= useState('');
+  const[lastname, setLastname] = useState('');
+  const [email, setEmail]= useState('');
+  const [password,setPassword]=useState('');
+  const [data,setData]=useState(null);
+  const navigate = useNavigate();
+
 
   const handlePasswordFocus = () => {
     setShowPasswordPopup(true);
   };
-
-  const handleSavePassword = () => {
-    setShowPasswordPopup(false);
+  const handlePasswordSave = ()=>{
+    setPassword(true);
+  }
+  const handleSaveProfile = async () => {
+    console.log('api calling')
+    const user ={
+      firstname,
+      lastname,
+      email,
+      password,
+    };
+    console.log (user)
+    try{
+      const response = await axios.post("http://localhost:3000/api/profileinfo",user)
+      setData(response.data);
+      navigate('/home')
+    }catch(error){
+      console.log(error);
+    }
   };
 
   return (
@@ -28,15 +53,15 @@ const Profile = () => {
         <div className='profile-info'>
             <h1>Account Info</h1>
            <p>First Name</p>
-           <input type='FirstName'/><span className='editicon'><MdEdit/></span> 
+           <input type='FirstName' onChange={(e) =>{setFirstname(e.target.value);}}/><span className='editicon'><MdEdit/></span> 
             <p>Last Name</p>
-          <input type='LastName'/><span className='editicon'><MdEdit/></span> 
+          <input type='LastName' onChange={(e)=>{setLastname(e.target.value);}}/><span className='editicon'><MdEdit/></span> 
            <p>Email</p>
-          <input type='Email'/>
+          <input type='Email' onChange={(e)=>{setEmail(e.target.value );}} />
 
           <div className='cpassword'>
            <p>Password</p>
-           <input type='Password' placeholder='Change Password'/>
+           <input type='Password'placeholder='Change Password' onChange={(e)=>{setPassword(e.target.value); }} />
            <span className='editicon'><MdEdit  onClick={handlePasswordFocus}/></span> 
            {showPasswordPopup && (
             <div className='password-popup'>
@@ -58,8 +83,7 @@ const Profile = () => {
                  Btntype="button"
                  BtnclassName="add-layout-btn savebtn"
                  BtnText="Save"
-                 onClick={handleSavePassword} 
-                />
+                 ClickEvent={handlePasswordSave}/>
               </div>
             </div>
           )}
@@ -72,7 +96,8 @@ const Profile = () => {
           <CustomButton
            Btntype="button"
            BtnclassName="add-layout-btn savebtn"
-           BtnText="Save"/>
+           BtnText="Save"
+           ClickEvent={handleSaveProfile}/>
        </div>
     </div>
   </div>
