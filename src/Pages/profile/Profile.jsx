@@ -21,19 +21,6 @@ const Profile = () => {
     setShowPasswordPopup(true);
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:3000/api/backendneoleon');
-        setData(response.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
   const handleSaveProfile = async () => {
     console.log('api calling')
     const user = {
@@ -44,8 +31,9 @@ const Profile = () => {
     };
     console.log(user)
     try {
-      const profile = await axios.post('http://localhost:3000/api/backendneoleon', user)
+      const response = await axios.post('http://localhost:3000/api/backendneoleon', user)
           setData(response.data);
+          navigate('/home')
     } catch (error) {
       console.log(error);
     }
@@ -92,7 +80,6 @@ const Profile = () => {
                   Btntype="button"
                   BtnclassName="add-layout-btn savebtn"
                   BtnText="Save"
-                  ClickEvent={handleSaveProfile}
                 />
               </div>
             </div>
@@ -107,6 +94,7 @@ const Profile = () => {
             Btntype="button"
             BtnclassName="add-layout-btn savebtn"
             BtnText="Save"
+            ClickEvent={handleSaveProfile}
           />
         </div>
       </div>

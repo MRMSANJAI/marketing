@@ -33,20 +33,6 @@ const handleAddaudience = () => {
   navigate('./addaudience')
 }
 
-const mongoose = require('mongoose') ;
-
-const campaignSchema = new mongoos.Schema({
-  title: String,
-  description: String,
-  audience: String, });
-
-  const Campaign = mongoose.model('Campaign', campaignSchema);
-
-
-  module.exports = Campaign ;
-
-
-
   return (
     <div className='donw'>
     <div className='cam'>
