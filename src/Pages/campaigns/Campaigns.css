@@ -167,12 +167,13 @@ margin-bottom: 30px;
 
 .searchs{
   height: 40px;
-  width: 1300px;
+  width: 1200px;
   border-radius: 7px; 
 }
 .donw{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding-left: 2%;
+  width: 1300px;
 }
 .tappi{
   padding-right: 7%;
@@ -181,5 +182,14 @@ margin-bottom: 30px;
 .cam h3{
   font-size: 23px;
   font-weight: 600;
+}
+
+@media screen and (max-width: 1200px) {
+      .donw{
+        width: 1000px;
+      }
+      .searchs{
+        width: 1000px;
+      }
 }
 
