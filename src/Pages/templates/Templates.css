@@ -1,6 +1,5 @@
 .template-page-cont{
-    margin-left: 70px;
-    width: 1000px;
+    margin-left: 50px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -93,9 +92,9 @@
     color: #333;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (max-width: 412px) {
     .template-page-cont {
-        margin-left: 70px;
+        margin-left: 20px;
         width: 95%;
         gap: 20px;
     }
@@ -103,6 +102,6 @@
         font-size: 28px;
     }
     .btn-cla-cont {
-        margin-left: 700px;
+        margin-left: -150px;
     }
 }
