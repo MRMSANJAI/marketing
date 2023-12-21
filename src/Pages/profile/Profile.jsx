@@ -31,7 +31,7 @@ const Profile = () => {
       lastname,
       email,
       password,
-    };
+    }
     console.log (user)
     try{
       const response = await axios.post("http://localhost:3000/api/profileinfo",user)
