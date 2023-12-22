@@ -26,7 +26,7 @@ const [adienceTarget , setAdienceTarget] = useState('')
       campaign:campaignName,
       budget:dailyBudget,
       rupes:currency,
-      startDate:startDate,
+      startdate:startDate,
       customaud:customAudience,
       targety:adienceTarget,
     }
@@ -66,7 +66,7 @@ const [adienceTarget , setAdienceTarget] = useState('')
         <input className='Rs' type="text" placeholder='  Rs.800                              INR' value={currency} onChange={(e) => setCurrency(e.target.value)} />
         <h4 >Schedule</h4>
         <h4 className='starts'>Start date</h4>
-        <input className="dates" type="text" placeholder='20/1-0/2023' value={startDate} onChange={(e) => setStartDate(e.target.value)} />
+        <input className="dates" type="date" placeholder='20/1-0/2023' value={startDate} onChange={(e) => setStartDate(e.target.value)} />
         <h4 className='dne'>End</h4>
        <div className='check'> <input className='sixess' type="checkbox" /> <p className='ffff'>Set an end date</p></div>
       </div>
