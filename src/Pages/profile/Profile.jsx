@@ -14,16 +14,17 @@ const Profile = () => {
   const[lastname, setLastname] = useState('');
   const [email, setEmail]= useState('');
   const [password,setPassword]=useState('');
-  const [datas,setDatas]=useState(null);
+  const [data,setData]=useState(null);
   const navigate = useNavigate();
 
 
   const handlePasswordFocus = () => {
     setShowPasswordPopup(true);
   };
-  const handlePasswordSave = ()=>{
+  const handlePasswordSave =() =>{
     setPassword(true);
-  }
+  };
+  
   const handleSaveProfile = async () => {
     console.log('api calling')
     const user ={
@@ -35,7 +36,7 @@ const Profile = () => {
     console.log (user)
     try{
       const response = await axios.post("http://localhost:3000/api/profileinfo",user)
-      setDatas(response.data);
+      setData(response.data);
       navigate('/home')
     }catch(error){
       console.log(error);
@@ -83,7 +84,8 @@ const Profile = () => {
                  Btntype="button"
                  BtnclassName="add-layout-btn savebtn"
                  BtnText="Save"
-                 ClickEvent={handlePasswordSave}/>
+                ClickEvent={handlePasswordSave}
+                />
               </div>
             </div>
           )}
