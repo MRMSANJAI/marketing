@@ -2,17 +2,49 @@ import React, { useState } from 'react';
 import "./Addaudience.css"
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
+import axios from 'axios';
 
 const Addaudience = () => {
   const [showaddaudience2, setshowaddaudience2] = useState(false);
+  
+  const [isView , setView] = useState(true)
+
+  const [campaignName, setCampaignName] =useState('')
+const [dailyBudget , setDailyBudget] = useState('')
+const [currency , setCurrency] = useState('')
+const [startDate , setStartDate] = useState('')
+const [customAudience , setCustomAdience] = useState('')
+const [adienceTarget , setAdienceTarget] = useState('')
+
    const handleaddaudience2 = () =>{
     setshowaddaudience2(true);
+    setView(!isView)
    }
+
+   const sendDataTOBackend = () =>{
+    const dataTosend ={
+      campaign:campaignName,
+      budget:dailyBudget,
+      rupes:currency,
+      startDate:startDate,
+      customaud:customAudience,
+      targety:adienceTarget,
+    }
+    axios.post('http://localhost:3000/api/createcamp',dataTosend)
+    .then((response) =>{
+      console.log('Data Send Sucessfully',response.data)
+    })
+    .catch((error) =>{
+      console.error('error sending data',error)
+    })
+   }
+
+
   return (
     <div className='boxes'>
       <div className='container1'>
         <h4>Campaign name</h4>
-        <input className='inbtn' type="text" placeholder='  New Traffic Campaing' />
+        <input className='inbtn' type="text" placeholder='  New Traffic Campaing' value= {campaignName} onChange={(e) => setCampaignName(e.target.value)}/>
       </div>
       <div className='container2'>
         <h4>Campaign details</h4>
@@ -30,15 +62,16 @@ const Addaudience = () => {
       <div className='container3'>
         <h4>Budget and Schedule</h4>
         <h4>Budget</h4>
-        <input className='texts' type="text" placeholder='  Daily Budget' /> <input className='Rs' type="text" placeholder='  Rs.800                                  INR' />
+        <input className='texts' type="text" placeholder='  Daily Budget' value={dailyBudget} onChange={(e) => setDailyBudget(e.target.value)} /> 
+        <input className='Rs' type="text" placeholder='  Rs.800                              INR' value={currency} onChange={(e) => setCurrency(e.target.value)} />
         <h4 >Schedule</h4>
         <h4 className='starts'>Start date</h4>
-        <input className="dates" type="text" placeholder='20/1-0/2023' />
+        <input className="dates" type="text" placeholder='20/1-0/2023' value={startDate} onChange={(e) => setStartDate(e.target.value)} />
         <h4 className='dne'>End</h4>
        <div className='check'> <input className='sixess' type="checkbox" /> <p className='ffff'>Set an end date</p></div>
       </div>
       <div>
-        <button className='btnadd' onClick={handleaddaudience2}>Add Audience</button>
+      {isView && <button className='btnadd' onClick={handleaddaudience2}>Add Audience</button>}  
         {showaddaudience2&&(
 
 <div className="contaddaud">
@@ -58,7 +91,7 @@ const Addaudience = () => {
     <div>
         <h3 className="locate">Exclude these custom audience</h3>
        <span className="searche"> <FaSearch /></span>
-        <input className="inbtn"  type="text" placeholder="Search existing audience" />
+        <input className="inbtn"  type="text" placeholder="     Search existing audience" value={customAudience} onChange={(e) => setCustomAdience (e.target.value)} />
     </div>
 
     <div>
@@ -74,14 +107,14 @@ const Addaudience = () => {
     <div>
         <h3>Detailed targeting</h3>
       <span className="searche">  <FaSearch /></span>
-        <input className="inbtn"type="text" placeholder=" Add Demographics,interests or behaviours. Browser"/>
+        <input className="inbtn"type="text" placeholder="      Add Demographics,interests or behaviours. Browser" value={adienceTarget} onChange={(e) => setAdienceTarget(e.target.value)} />
     </div>
 </div>
         )}
       </div>
-      <span className='bode'></span>
+   
       <div className='btnca'>
-        <button className='campi'>Add Campaign</button>
+        <button className='campi'  onClick={sendDataTOBackend}>Add Campaign</button>
       </div>
     </div>
 

@@ -20,6 +20,8 @@ const Company = () => {
     setSelectedHeading(heading);
   }
 
+  
+
   return (
     <div className='company-details'>
         <div className='company-container'>
