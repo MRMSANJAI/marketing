@@ -90,3 +90,20 @@
         max-height: 180px;
     }
 }
+@media (max-width:1370px) {
+    .company {
+        width: 1150px;
+    }
+    .Edit-btn{
+        margin-left: 780px;
+    }
+    .Audience-heading{
+        width: 1160px;
+    }
+    .Audience-heading h2{
+        font-size: 22px;
+    }
+    .Target-btn{
+        margin-left: 750px;
+    }
+}

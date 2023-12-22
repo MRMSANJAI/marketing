@@ -21,7 +21,6 @@
     /* border-radius: 5px; */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
-    width: 200%;
   }
   .data{
     height: 40px;
@@ -46,7 +45,7 @@
 
  }
  .ith{
-width: 200x !important;
+width: 200px !important;
  }
  .btnc{
   background-color: rgb(19, 83, 143);
@@ -167,7 +166,7 @@ margin-bottom: 30px;
 
 .searchs{
   height: 40px;
-  width: 1150px;
+  width: 1050px;
   border-radius: 7px; 
   padding: 2px 30px;
 }
@@ -192,12 +191,4 @@ margin-bottom: 30px;
   font-weight: 600;
 }
 
-@media screen and (max-width: 1200px) {
-      .donw{
-        width: 1000px;
-      }
-      .searchs{
-        width: 1000px;
-      }
-}
 
