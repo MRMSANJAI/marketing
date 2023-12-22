@@ -167,8 +167,9 @@ margin-bottom: 30px;
 
 .searchs{
   height: 40px;
-  width: 1200px;
+  width: 1150px;
   border-radius: 7px; 
+  padding: 2px 30px;
 }
 .donw{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -176,8 +177,15 @@ margin-bottom: 30px;
   width: 1300px;
 }
 .tappi{
-  padding-right: 7%;
   margin-right: 10%;
+  display: inline-block;
+  position: relative;
+}
+.sea-inp-icon{
+  color: #888;
+    position: absolute;
+    left: 10px;
+   transform: translateY(60%);
 }
 .cam h3{
   font-size: 23px;
