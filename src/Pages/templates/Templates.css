@@ -57,7 +57,7 @@
 .edi-pen-btn{
     height: 30px;
     width: 70px;
-    margin-left: 140px;
+    margin-left: 100px;
     background-color: rgb(19, 83, 143);
     color: #fff;
     justify-content: center;
@@ -86,6 +86,7 @@
     font-size: 24px;
     justify-content: center;
     align-items: center;
+    margin-right: 20px;
 }
 .dro-items{
     text-decoration: none;

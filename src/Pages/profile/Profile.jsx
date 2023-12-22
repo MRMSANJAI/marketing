@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import './Profile.css';
 import { CgProfile } from 'react-icons/cg';
 import { MdEdit } from "react-icons/md";
@@ -6,7 +6,7 @@ import CustomButton from '../../Components/button/Button';
 import LoginButton from '../../Components/buttons/Button2';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { db,app,auth } from '../../Components/firebase-config';
+import { db } from '../../Components/firebase-config';
 import { getAuth,onAuthStateChanged } from 'firebase/auth';
 
 
