@@ -6,6 +6,8 @@ import CustomButton from '../../Components/button/Button';
 import LoginButton from '../../Components/buttons/Button2';
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom';
+import { db,app,auth } from '../../Components/firebase-config';
+import { getAuth,onAuthStateChanged } from 'firebase/auth';
 
 
 const Profile = () => {
@@ -15,6 +17,7 @@ const Profile = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [data,setData] = useState(null);
+  const [userEmail,setUserEmail] = useState("");
   const navigate = useNavigate();
 
   const handlePasswordFocus = () => {
@@ -39,8 +42,35 @@ const Profile = () => {
     }
   };
 
+  useEffect(() => {
+    const auth = getAuth();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const userId = lv0cNJHHt0b4Jmi5fs0lSGt8GLB2;
+        const userRef = doc(db, 'users', userId);
+
+        getDoc(userRef)
+        .then((doc) => {
+          if(doc.exists()) {
+            const userData = doc.data();
+            setFirstname(userData.firstname);
+            setLastname(userData.lastname);
+            setEmail(userData.email);
+          } else {
+            console.log('No such document!');
+          }
+        })
+        .catch((error) => {
+          console.log('Error getting document:',error);
+        });
+      } else {
+        navigate('/login')
+      }
+    })
+  }, [navigate]);
+
   return (
-    <div className='Profile-container' style={{ display: "flex" }}>
+    <div className='profile-container' style={{ display: "flex" }}>
       <div className='profile-header'>
         <h1>Profile</h1>
       </div>
