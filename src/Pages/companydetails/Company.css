@@ -37,7 +37,7 @@
     text-align: left;
     align-items: flex-start;
     margin-top: 30px;
-    width: 100%;
+    width: 1200px;
     height: 200px;
     border: 1px solid rgb(194, 181, 181);
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
@@ -77,16 +77,21 @@
     font-weight: 400;
     color:rgb(116, 113, 113);
 }
+
 .location-content {
-    margin-left: 480px;
-    padding-top: 50px;
+    width: 800px;
+    height: 180px;
 }
 .location-content h3{
     font-size: 25px;
     font-weight: 400;
+    padding-left: 480px;
+    padding-top: 50px;
 }
 .location-content p{
     color: grey;
+    padding-left: 480px;
+    
 }
 
 .companyname-content{
@@ -220,13 +225,13 @@
     height: 40px;
 }
 
-@media screen and (max-width: 768px) {
-    .company-container {
-        max-width: 800px;
+@media screen and (max-width: 1204px) {
+    .company-details {
+        max-width: 600px;
     }
 }
 @media screen and (max-height: 600px) {
-    .company-container {
+    .company-details {
         max-height: 300px; 
     }
 }
