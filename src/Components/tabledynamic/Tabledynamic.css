@@ -3,12 +3,10 @@
     width: 1200px;
     margin-left: -20px;
   }
-  
   .root-table {
     width: 100%;
     border-collapse: collapse;
   }
-  
   .header-table {
     background-color: #f0f0f0;
   }

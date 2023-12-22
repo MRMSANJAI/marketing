@@ -3,7 +3,6 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import { MdArrowDropDown } from "react-icons/md";
 import { FaFacebook,FaTwitter ,FaLinkedinIn ,FaLink } from "react-icons/fa";
 import "./Company.css";
-
 import Jobposition from '../../Components/jobposition/Jobposition';
 import News from '../../Components/news/News';
 import Fundingrounds from '../../Components/fundingrounds/Fundingrounds';
@@ -14,7 +13,7 @@ import Empolyeetrend from '../../Components/employeetrend/Empolyeetrend';
 const Company = () => {
   const [selectedHeading, setSelectedHeading] = useState(null);
 
-  const [data, setData] = useState(null);
+   const [data, setData] = useState(null);
 
 
   const handleHeadingClick = (heading) => {
@@ -24,7 +23,6 @@ const Company = () => {
   return (
     <div className='company-details'>
         <div className='company-container'>
-          <button onClick={fetchData}></button>
           <h3>Company Name</h3>
           <p>Company at Company Name</p>
           <Dropdown>

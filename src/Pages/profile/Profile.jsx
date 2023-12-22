@@ -1,10 +1,10 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import './Profile.css';
 import { CgProfile } from 'react-icons/cg';
 import { MdEdit } from "react-icons/md";
 import CustomButton from '../../Components/button/Button';
 import LoginButton from '../../Components/buttons/Button2';
-import axios from 'axios'
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { db,app,auth } from '../../Components/firebase-config';
 import { getAuth,onAuthStateChanged } from 'firebase/auth';
@@ -20,24 +20,27 @@ const Profile = () => {
   const [userEmail,setUserEmail] = useState("");
   const navigate = useNavigate();
 
+
   const handlePasswordFocus = () => {
     setShowPasswordPopup(true);
   };
-
+  const handlePasswordSave = ()=>{
+    setPassword(true);
+  }
   const handleSaveProfile = async () => {
     console.log('api calling')
-    const user = {
+    const user ={
       firstname,
       lastname,
       email,
       password,
-    };
-    console.log(user)
-    try {
-      const response = await axios.post('http://localhost:3000/api/backendneoleon', user)
-          setData(response.data);
-          navigate('/home')
-    } catch (error) {
+    }
+    console.log (user)
+    try{
+      const response = await axios.post("http://localhost:3000/api/profileinfo",user)
+      setDatas(response.data);
+      navigate('/home')
+    }catch(error){
       console.log(error);
     }
   };
@@ -86,49 +89,48 @@ const Profile = () => {
         <p>Email</p>
         <input type='Email' onChange={(e) => { setEmail(e.target.value); }} />
 
-        <div className='cpassword'>
-          <p>Password</p>
-          <input type='Password' placeholder='Change Password' onChange={(e) => { setPassword(e.target.value); }} />
-          <span className='editicon'><MdEdit onClick={handlePasswordFocus} /></span>
-          {showPasswordPopup && (
+          <div className='cpassword'>
+           <p>Password</p>
+           <input type='Password'placeholder='Change Password' onChange={(e)=>{setPassword(e.target.value); }} />
+           <span className='editicon'><MdEdit  onClick={handlePasswordFocus}/></span> 
+           {showPasswordPopup && (
             <div className='password-popup'>
               <h2>Edit Password</h2>
               <p>Current Password</p>
-              <input type='text' />
+              <input type='text'/>
               <p>New Password</p>
-              <input type='text' />
+              <input type='text'/>
               <p>Confrim New Password</p>
-              <input type='text' />
+              <input type='text'/>
               <div className='popup-buttons'>
-                <LoginButton
-                  Btntypes="button"
-                  BtnclassNames="add-login-btn cancelbtn"
-                  BtnTexts="Cancel"
-                  ClickEvents={() => setShowPasswordPopup(false)}
+               <LoginButton
+                Btntypes="button"
+                BtnclassNames="add-login-btn cancelbtn"
+                BtnTexts="Cancel"
+                ClickEvents={() => setShowPasswordPopup(false)}
                 />
-                <CustomButton
-                  Btntype="button"
-                  BtnclassName="add-layout-btn savebtn"
-                  BtnText="Save"
-                />
+               <CustomButton
+                 Btntype="button"
+                 BtnclassName="add-layout-btn savebtn"
+                 BtnText="Save"
+                 ClickEvent={handlePasswordSave}/>
               </div>
             </div>
           )}
-        </div>
-        <div className='Buttonns'>
+          </div>
+       <div className='Buttonns'>
           <LoginButton
-            Btntypes="button"
-            BtnclassNames="add-login-btn cancelbtn"
-            BtnTexts="Cancel" />
+          Btntypes="button"
+           BtnclassNames="add-login-btn cancelbtn"
+           BtnTexts="Cancel"/>
           <CustomButton
-            Btntype="button"
-            BtnclassName="add-layout-btn savebtn"
-            BtnText="Save"
-            ClickEvent={handleSaveProfile}
-          />
-        </div>
-      </div>
+           Btntype="button"
+           BtnclassName="add-layout-btn savebtn"
+           BtnText="Save"
+           ClickEvent={handleSaveProfile}/>
+       </div>
     </div>
+  </div>
   );
 };
 
