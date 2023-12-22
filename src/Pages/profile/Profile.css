@@ -59,6 +59,7 @@
     height: 41px;
     font-size: 13px;
     background: rgb(19, 83, 143);
+    cursor: pointer;
 }
 .cancelbtn{
     width: 95px;
@@ -96,4 +97,13 @@
     display: flex;
     flex-direction: row;
     gap:25px;
+}
+
+@media screen and (min-width: 400px) {
+  .profile-icon p{
+    font-size: 250px;
+}
+.profile-info {
+    margin-left: 170px;
+}
 }

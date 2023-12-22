@@ -121,3 +121,9 @@
   .bode{
     border-bottom: 2px solid black;
   }   
+
+  @media screen and (min-width: 1200px) {
+    .boxes{
+      width: 1200px;
+    } 
+  }

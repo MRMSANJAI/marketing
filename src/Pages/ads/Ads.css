@@ -1,5 +1,5 @@
 .ads-page{
-    margin-left: 20px;
+    margin-left: 30px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -10,7 +10,8 @@
     font-family: 14px;
 }
 .sea-inp-bar{
-    width: 1100px;
+    margin-left: 10px;
+    width: 1220px;
     height: 35px;
     padding: 8px 30px 8px 35px;
     border: 1px solid #888;
@@ -35,7 +36,7 @@
     font-weight: 600;
 }
 .tab-btn-cont{
-    width: 1080px;
+    width: 1200px;
     border: 1px solid #888;
     border-radius: 10px;
     margin-left: 20px;

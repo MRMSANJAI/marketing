@@ -34,17 +34,13 @@ const handleAddaudience = () => {
 }
 
 
-
-
   return (
     <div className='donw'>
     <div className='cam'>
       <h3>Campaings</h3>
       </div>
-      <div className='tappi'>
-     <div  className='search-icon'> 
-     <FaSearch />
-     </div > 
+      <div className='tappi'> 
+     <FaSearch className='sea-inp-icon'/>
       <input className='searchs' type="search"  placeholder="Search and filter" id="search" name="search" required />
       </div>
       <div className='deri'>
