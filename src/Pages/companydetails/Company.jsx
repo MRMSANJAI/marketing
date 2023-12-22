@@ -50,9 +50,8 @@ const Company = () => {
              </div>
              <div className='location-content'>
                <h3>Location</h3>
-               <p>Delhi,India</p>
-             </div>
-          </div>
+               <p>Delhi,India</p></div>
+            </div>
         </div> 
         <div className='companyname-content'>
           <div className='Name-container' style={{display:"flex"}}>
