@@ -38,7 +38,7 @@ const Profile = () => {
     }
     console.log (user)
     try{
-      const response = await axios.post("http://localhost:3000/api/backendneoleon",user)
+      const response = await axios.post("http://localhost:3000/api/profileinfo",user)
       setData(response.data);
       navigate('/home')
     }catch(error){
