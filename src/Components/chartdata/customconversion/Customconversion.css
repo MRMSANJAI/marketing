@@ -75,3 +75,11 @@
     font-size: 23px;
     font-weight: 600;
   }
+  @media (max-width:1380px){
+    .tttahh{
+      width: 1200px;
+    }
+    .custom-table{
+      width: 1170px;
+    }
+  }
