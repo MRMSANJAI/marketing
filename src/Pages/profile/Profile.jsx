@@ -6,6 +6,8 @@ import CustomButton from '../../Components/button/Button';
 import LoginButton from '../../Components/buttons/Button2';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+
 
 
 const Profile = () => {
@@ -16,6 +18,7 @@ const Profile = () => {
   const [password,setPassword]=useState('');
   const [data,setData]=useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
 
   const handlePasswordFocus = () => {
@@ -24,7 +27,7 @@ const Profile = () => {
   const handlePasswordSave =() =>{
     setPassword(true);
   };
-  
+
   const handleSaveProfile = async () => {
     console.log('api calling')
     const user ={
@@ -35,13 +38,17 @@ const Profile = () => {
     }
     console.log (user)
     try{
-      const response = await axios.post("http://localhost:3000/api/profileinfo",user)
+      const response = await axios.post("http://localhost:3000/api/backendneoleon",user)
       setData(response.data);
       navigate('/home')
     }catch(error){
       console.log(error);
     }
   };
+
+      const user = location.state;
+      console.log(user)
+  
   return (
     <div className='profile-container' style={{ display: "flex" }}>
       <div className='profile-header'>
@@ -57,7 +64,7 @@ const Profile = () => {
         <p>Last Name</p>
         <input type='LastName' onChange={(e) => { setLastname(e.target.value); }} /><span className='editicon'><MdEdit /></span>
         <p>Email</p>
-        <input type='Email' onChange={(e) => { setEmail(e.target.value); }} />
+        <input type='Email' onChange={(e) => { setEmail(e.target.value) }} value={user.email}/>
 
           <div className='cpassword'>
            <p>Password</p>

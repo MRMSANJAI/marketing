@@ -62,7 +62,7 @@ const handleAddaudience = () => {
       <tbody className="blue"  >
         <tr>
           <td  className="btnon"><FaToggleOff /> </td>
-          <td className="peri ,colo" >New Traffic Campaign <div className="vied"> <VscGraph /><button className='update' onClick={handleClick}>View chat</button> <MdModeEditOutline />
+          <td className="peri ,colo" >New Traffic Campaign <div className="vied"> <VscGraph /><button className='update' onClick={handleClick}>View chart</button> <MdModeEditOutline />
           <button className='update' onClick={ handleAddCampaign}>Edit</button>
           {showAddCampaignpopup &&(
   <div className="aling">

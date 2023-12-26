@@ -4,7 +4,7 @@ import CustomButton from "../../Components/button/Button";
 import LoginButton from '../../Components/buttons/Button2';
 import { Link, useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../Components/firebase-config';
+import {auth} from '../../Components/firebase-config'
 
 const Login = () => {
 
@@ -15,12 +15,14 @@ const Login = () => {
 
     const [loginEmail, setLoginEmail] = useState("");
     const [loginPassword, setLoginPassword] = useState("");
+    const [user,setUser] = useState("");
 
     const login = async () => {
         try {
             const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
-            console.log("Login successful");
-            navigate('/profile')
+            console.log("Login successful", user);
+            setUser (user.user)
+            navigate('/profile', { state: { email: user.user.email,uid:user.user.uid, displayName: user.user.displayName } });
         } catch (error) {
             console.log(error.message);
         }
