@@ -20,7 +20,7 @@ const Start = () => {
     try {
       const user = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword);
       console.log(user);
-      navigate('/home');
+      navigate('/profile');
     } catch (error) {
       console.log(error.message);
     }
