@@ -6,10 +6,8 @@ import CustomButton from '../../Components/button/Button';
 import LoginButton from '../../Components/buttons/Button2';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import { updateProfile } from 'firebase/auth';
+import { updatePassword, updateProfile } from 'firebase/auth';
 import { auth } from '../../Components/firebase-config';
-
-
 
 const Profile = () => {
   const [showPasswordPopup, setShowPasswordPopup] = useState(false);
@@ -24,8 +22,19 @@ const Profile = () => {
   const handlePasswordFocus = () => {
     setShowPasswordPopup(true);
   };
-  const handlePasswordSave =() =>{
-    setPassword(true);
+  const handlePasswordSave = async () =>{
+    try{
+      const user = auth.currentUser;
+      if(user){
+        await updatePassword(user,password);
+        setShowPasswordPopup(false);
+        console.log("password updated sucessfully");
+      }else{
+        console.error("User not authenticated");
+      }
+    }catch(error){
+      console.error('Error updating password', error);
+    }
   };
 
   const handleSaveProfile = async () => {
@@ -58,7 +67,7 @@ const Profile = () => {
         <p>Last Name</p>
         <input type='LastName' onChange={(e) => { setLastname(e.target.value); }} /><span className='editicon'><MdEdit /></span>
         <p>Email</p>
-        <input type='Email' onChange={(e) => { setEmail(e.target.value) }} value={user?.email || ''}/>
+        <input type='Email' onChange={(e) => { setEmail(e.target.value) }} value={user?.email || email}/>
 
           <div className='cpassword'>
            <p>Password</p>
@@ -68,11 +77,11 @@ const Profile = () => {
             <div className='password-popup'>
               <h2>Edit Password</h2>
               <p>Current Password</p>
-              <input type='text'/>
+              <input type='password'/>
               <p>New Password</p>
-              <input type='text'/>
+              <input type='password'/>
               <p>Confrim New Password</p>
-              <input type='text'/>
+              <input type='password'/>
               <div className='popup-buttons'>
                <LoginButton
                 Btntypes="button"
