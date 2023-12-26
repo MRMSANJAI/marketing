@@ -54,3 +54,9 @@
     float: right;
     font-weight: 600;
 }
+
+@media (max-width:1400px) {
+   .char-cont{
+     width: 1100px;
+   }
+}
