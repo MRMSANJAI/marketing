@@ -4,9 +4,10 @@ import { CgProfile } from 'react-icons/cg';
 import { MdEdit } from "react-icons/md";
 import CustomButton from '../../Components/button/Button';
 import LoginButton from '../../Components/buttons/Button2';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import { updateProfile } from 'firebase/auth';
+import { auth } from '../../Components/firebase-config';
 
 
 
@@ -16,7 +17,6 @@ const Profile = () => {
   const[lastname, setLastname] = useState('');
   const [email, setEmail]= useState('');
   const [password,setPassword]=useState('');
-  const [data,setData]=useState(null);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -29,23 +29,17 @@ const Profile = () => {
   };
 
   const handleSaveProfile = async () => {
-    console.log('api calling')
-    const user ={
-      firstname,
-      lastname,
-      email,
-      password,
-    }
-    console.log (user)
-    try{
-      const response = await axios.post("http://localhost:3000/api/backendneoleon",user)
-      setData(response.data);
-      navigate('/home')
-    }catch(error){
-      console.log(error);
+    try {
+      await updateProfile(auth.currentUser, {
+        displayName: `${firstname} ${lastname}`,
+      });
+  
+      console.log('Profile updated successfully');
+      navigate('/home');
+    } catch (error) {
+      console.error('Error updating profile', error);
     }
   };
-
       const user = location.state;
       console.log(user)
   
@@ -64,7 +58,7 @@ const Profile = () => {
         <p>Last Name</p>
         <input type='LastName' onChange={(e) => { setLastname(e.target.value); }} /><span className='editicon'><MdEdit /></span>
         <p>Email</p>
-        <input type='Email' onChange={(e) => { setEmail(e.target.value) }} value={user.email}/>
+        <input type='Email' onChange={(e) => { setEmail(e.target.value) }} value={user?.email || ''}/>
 
           <div className='cpassword'>
            <p>Password</p>
