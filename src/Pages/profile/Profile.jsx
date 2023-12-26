@@ -6,8 +6,7 @@ import CustomButton from '../../Components/button/Button';
 import LoginButton from '../../Components/buttons/Button2';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { db } from '../../Components/firebase-config';
-import { getAuth,onAuthStateChanged } from 'firebase/auth';
+import { useLocation } from 'react-router-dom';
 
 
 const Profile = () => {
@@ -18,6 +17,7 @@ const Profile = () => {
   const [password,setPassword]=useState('');
   const [data,setData]=useState(null);
   const navigate = useNavigate();
+  const location = useLocation();
 
 
   const handlePasswordFocus = () => {
@@ -26,7 +26,7 @@ const Profile = () => {
   const handlePasswordSave =() =>{
     setPassword(true);
   };
-  
+
   const handleSaveProfile = async () => {
     console.log('api calling')
     const user ={
@@ -37,7 +37,7 @@ const Profile = () => {
     }
     console.log (user)
     try{
-      const response = await axios.post("http://localhost:3000/api/profileinfo",user)
+      const response = await axios.post("http://localhost:3000/api/backendneoleon",user)
       setData(response.data);
       navigate('/home')
     }catch(error){
@@ -45,33 +45,10 @@ const Profile = () => {
     }
   };
 
-  useEffect(() => {
-    const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        const userId = lv0cNJHHt0b4Jmi5fs0lSGt8GLB2;
-        const userRef = doc(db, 'users', userId);
-
-        getDoc(userRef)
-        .then((doc) => {
-          if(doc.exists()) {
-            const userData = doc.data();
-            setFirstname(userData.firstname);
-            setLastname(userData.lastname);
-            setEmail(userData.email);
-          } else {
-            console.log('No such document!');
-          }
-        })
-        .catch((error) => {
-          console.log('Error getting document:',error);
-        });
-      } else {
-        navigate('/login')
-      }
-    })
-  }, [navigate]);
-
+      const user = location.state;
+      console.log(user)
+  
+  
   return (
     <div className='profile-container' style={{ display: "flex" }}>
       <div className='profile-header'>
@@ -87,7 +64,7 @@ const Profile = () => {
         <p>Last Name</p>
         <input type='LastName' onChange={(e) => { setLastname(e.target.value); }} /><span className='editicon'><MdEdit /></span>
         <p>Email</p>
-        <input type='Email' onChange={(e) => { setEmail(e.target.value); }} />
+        <input type='Email' onChange={(e) => { setEmail(e.target.value) }} value={user.email}/>
 
           <div className='cpassword'>
            <p>Password</p>
