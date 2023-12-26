@@ -6,6 +6,8 @@ import CustomButton from '../../Components/button/Button';
 import LoginButton from '../../Components/buttons/Button2';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import { updateProfile,updatePassword } from 'firebase/auth';
+import { auth } from '../../Components/firebase-config';
 import { updatePassword, updateProfile } from 'firebase/auth';
 import { auth } from '../../Components/firebase-config';
 
@@ -15,6 +17,7 @@ const Profile = () => {
   const[lastname, setLastname] = useState('');
   const [email, setEmail]= useState('');
   const [password,setPassword]=useState('');
+  const [passwordUpdate,setPasswordUpdate] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -22,6 +25,23 @@ const Profile = () => {
   const handlePasswordFocus = () => {
     setShowPasswordPopup(true);
   };
+
+  const passwordupdatesuccess = () => {
+     setPasswordUpdate(true);
+  }
+  const handlePasswordSave = async () => {
+    try {
+      const user = auth.currentUser;
+  
+      if (user) {
+        await updatePassword(user, password);
+        setShowPasswordPopup(false);
+        setPasswordUpdate(true);
+        console.log("Password updated successfully")
+      } else {
+        console.error('User not authenticated');
+      }
+    } catch (error) {
   const handlePasswordSave = async () =>{
     try{
       const user = auth.currentUser;
@@ -68,7 +88,6 @@ const Profile = () => {
         <input type='LastName' onChange={(e) => { setLastname(e.target.value); }} /><span className='editicon'><MdEdit /></span>
         <p>Email</p>
         <input type='Email' onChange={(e) => { setEmail(e.target.value) }} value={user?.email || email}/>
-
           <div className='cpassword'>
            <p>Password</p>
            <input type='Password'placeholder='Change Password' onChange={(e)=>{setPassword(e.target.value); }} />
@@ -93,8 +112,21 @@ const Profile = () => {
                  Btntype="button"
                  BtnclassName="add-layout-btn savebtn"
                  BtnText="Save"
-                ClickEvent={handlePasswordSave}
+                ClickEvent={handlePasswordSave && passwordupdatesuccess} 
                 />
+                 {passwordUpdate && (
+            <div className='password-pop-up'>
+                 <h3> Password sucessfully changed</h3>
+              <div className='popup-buttons'>
+               <LoginButton
+                Btntypes="button"
+                BtnclassNames="add-login-btn cancelbtn"
+                BtnTexts="Cancel"
+                ClickEvents={() => setPasswordUpdate(false)}
+                />
+              </div>
+            </div>
+          )}
               </div>
             </div>
           )}
