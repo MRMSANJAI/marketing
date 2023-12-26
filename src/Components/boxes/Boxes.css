@@ -3,7 +3,7 @@
     flex-direction: row;
     gap: 50px;
     margin-top: 20px;
-    padding: 20px
+    padding: 20px;
 }
 .bottomcontent{
     background: white;
@@ -12,6 +12,7 @@
     width: 170px;
     height: 180px;
     border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .bottomcontent h1{
     font-size: 43px;
