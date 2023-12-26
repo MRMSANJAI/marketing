@@ -8,7 +8,8 @@ import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import { updateProfile,updatePassword } from 'firebase/auth';
 import { auth } from '../../Components/firebase-config';
-
+import { updatePassword, updateProfile } from 'firebase/auth';
+import { auth } from '../../Components/firebase-config';
 
 const Profile = () => {
   const [showPasswordPopup, setShowPasswordPopup] = useState(false);
@@ -24,6 +25,7 @@ const Profile = () => {
   const handlePasswordFocus = () => {
     setShowPasswordPopup(true);
   };
+
   const passwordupdatesuccess = () => {
      setPasswordUpdate(true);
   }
@@ -40,6 +42,17 @@ const Profile = () => {
         console.error('User not authenticated');
       }
     } catch (error) {
+  const handlePasswordSave = async () =>{
+    try{
+      const user = auth.currentUser;
+      if(user){
+        await updatePassword(user,password);
+        setShowPasswordPopup(false);
+        console.log("password updated sucessfully");
+      }else{
+        console.error("User not authenticated");
+      }
+    }catch(error){
       console.error('Error updating password', error);
     }
   };
