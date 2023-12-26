@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState} from 'react';
 import './Profile.css';
 import { CgProfile } from 'react-icons/cg';
 import { MdEdit } from "react-icons/md";
@@ -7,6 +7,7 @@ import LoginButton from '../../Components/buttons/Button2';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+
 
 
 const Profile = () => {
@@ -47,7 +48,6 @@ const Profile = () => {
 
       const user = location.state;
       console.log(user)
-  
   
   return (
     <div className='profile-container' style={{ display: "flex" }}>
