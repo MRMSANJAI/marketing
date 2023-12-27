@@ -6,8 +6,6 @@ import CustomButton from '../../Components/button/Button';
 import LoginButton from '../../Components/buttons/Button2';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import { updateProfile,updatePassword } from 'firebase/auth';
-import { auth } from '../../Components/firebase-config';
 import { updatePassword, updateProfile } from 'firebase/auth';
 import { auth } from '../../Components/firebase-config';
 
@@ -29,19 +27,6 @@ const Profile = () => {
   const passwordupdatesuccess = () => {
      setPasswordUpdate(true);
   }
-  const handlePasswordSave = async () => {
-    try {
-      const user = auth.currentUser;
-  
-      if (user) {
-        await updatePassword(user, password);
-        setShowPasswordPopup(false);
-        setPasswordUpdate(true);
-        console.log("Password updated successfully")
-      } else {
-        console.error('User not authenticated');
-      }
-    } catch (error) {
   const handlePasswordSave = async () =>{
     try{
       const user = auth.currentUser;
@@ -146,5 +131,6 @@ const Profile = () => {
   </div>
   );
 };
+  
 
 export default Profile;
