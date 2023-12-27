@@ -1,120 +1,98 @@
-import React from "react";
+import React,{useState} from "react";
 import { IoSearch } from "react-icons/io5";
 import CustomButton from "../../Components/button/Button";
 import { FaPen } from "react-icons/fa";
 import './Createads.css'
 import { Dropdown } from "react-bootstrap";
+import ReactDropdown from "react-dropdown";
+import 'react-dropdown/style.css';
+import axios from 'axios'
+import { useNavigate } from "react-router-dom";
                 
 const Createads = () => {
+  
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [adname,setAdname] = useState("");
+  const [campaignname,setCampaignname] = useState("");
+  const [bidstrategy,setBidstrategy] = useState("");
+  const [budget,setBudget] = useState("");
+  const [objective,setObjective] = useState("");
+  const [data,setData] = useState(null);
+  const navigate = useNavigate();
+
+  const options = ['Travel awareness', 'Cost awareness', 'Sales awareness'];
+  const strategyoptions = ['Budget Strategy', 'Travel Strategy', 'Limited Strategy']
+  const objectiveoptions = ['Cost Objective', 'Place Objective', 'Travel Objective']
+
+  const onSelect = (selected) => {
+    setSelectedOption(selected);
+  };
+
+  const handletabledata = async () => {
+    const tabledata = {
+      adname,
+      campaignname,
+      bidstrategy,
+      budget,
+      objective,
+    }
+    console.log(tabledata)
+    try {
+      const response = await axios.post("http://localhost:3000/api/backendneoleon",tabledata)
+      setData(response.data);
+      console.log("table data updated successfully")
+      navigate('/ads')
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
     return (
         <div className="cre-ads-cont">
          <div className="che-par-cont">
            <h1 className="camp-nam-head"><input type="checkbox" /> Campaign name</h1> 
-           <Dropdown>
-      <Dropdown.Toggle variant="success" id="dropdown-basic" className="dr-do-bt-ac">
-        Awareness Campaign
-      </Dropdown.Toggle>
-      <Dropdown.Menu>
-        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
+           <ReactDropdown
+          options={options}
+          onChange={(e) => {setCampaignname(e.target.value);}}
+          value={selectedOption}
+          placeholder="Awareness Campaign"
+        />
          </div>
          <div className="ad-nam-cont">
           <h1 className="camp-nam-head"> <input type="checkbox" /> Ad name</h1>
-          <input type="search" placeholder="New Traffic Ad" className="dr-do-bt-ac"/>
+          <input type="search" placeholder="New Traffic Ad" className="dr-do-bt-ac" onChange={(e) => {setAdname(e.target.value);}}/>
          </div>
-         <div className="sel-temp-cont">
-          <div>
-          <h1 className="camp-nam-head"><input type="checkbox" /> Select Templates</h1>
-          </div>
-          <div className="set-atb-cont">
-           <p className="sea-inp-par"> <IoSearch className="sear-bar-ico"/> <input type="search" placeholder="Search Existing Templates" className="sea-exi-inp"/> </p> 
-           <CustomButton 
-           Btntype = "button"
-           BtnclassName = "add-layout-btn add-temp-btn"
-           BtnText = "Add Template"
-           />
-          </div>
-          <div className="rep-cont">
-         <div className="che-aut-bar-cont">
-          <div className="che-par-con">
-            <input type="checkbox" />
-            <p className="box-para"></p>
-          </div>
-          <div>
-            <h1 className='xyz-temp'>XYZ Template</h1>
-            <p>Edited by Taru Pathak</p>
-          </div>
-          <div className="btn-edit">
-            <CustomButton 
-            Btntype = "button"
-            BtnclassName = "add-layout-btn edi-pen-btn"
-            BtnText = {<><FaPen/> Edit</>}
-            />
-          </div>
-          </div>
 
-          <div className="che-aut-bar-cont">
-          <div className="che-par-con">
-            <input type="checkbox" />
-            <p className="box-para"></p>
-          </div>
-          <div>
-            <h1 className='xyz-temp'>XYZ Template</h1>
-            <p>Edited by Taru Pathak</p>
-          </div>
-          <div className="btn-edit">
-            <CustomButton 
-            Btntype = "button"
-            BtnclassName = "add-layout-btn edi-pen-btn"
-            BtnText = {<><FaPen/> Edit</>}
-            />
-          </div>
-          </div>
+         <div className="che-par-cont">
+           <h1 className="camp-nam-head"><input type="checkbox" /> Bid Strategy</h1> 
+           <ReactDropdown
+          options={strategyoptions}
+          onChange={(e) => {setBidstrategy(e.target.value);}}
+          value={selectedOption}
+          placeholder="Strategy"
+        />
+         </div>
 
-          <div className="che-aut-bar-cont">
-          <div className="che-par-con">
-            <input type="checkbox" />
-            <p className="box-para"></p>
-          </div>
-          <div>
-            <h1 className='xyz-temp'>XYZ Template</h1>
-            <p>Edited by Taru Pathak</p>
-          </div>
-          <div className="btn-edit">
-            <CustomButton 
-            Btntype = "button"
-            BtnclassName = "add-layout-btn edi-pen-btn"
-            BtnText = {<><FaPen/> Edit</>}
-            />
-          </div>
-          </div>
+         <div className="ad-nam-cont">
+          <h1 className="camp-nam-head"> <input type="checkbox" /> Budget</h1>
+          <input type="search" placeholder="New Traffic Ad" className="dr-do-bt-ac" onChange={(e) => {setBudget(e.target.value);}}/>
+         </div>
 
-          <div className="che-aut-bar-cont">
-          <div className="che-par-con">
-            <input type="checkbox" />
-            <p className="box-para"></p>
-          </div>
-          <div>
-            <h1 className='xyz-temp'>XYZ Template</h1>
-            <p>Edited by Taru Pathak</p>
-          </div>
-          <div className="btn-edit">
-            <CustomButton 
-            Btntype = "button"
-            BtnclassName = "add-layout-btn edi-pen-btn"
-            BtnText = {<><FaPen/> Edit</>}
-            /> 
-          </div>
-          </div>
-          </div>
-          </div>
+         <div className="che-par-cont">
+           <h1 className="camp-nam-head"><input type="checkbox" /> Objective</h1> 
+           <ReactDropdown
+          options={objectiveoptions}
+          onChange={(e) => {setObjective(e.target.value);}}
+          value={selectedOption}
+          placeholder="Objectives"
+        />
+         </div>
+        
           <CustomButton 
           Btntype = "button"
           BtnclassName = "add-layout-btn add-camp-btns"
           BtnText = "Add Campaign"
+          ClickEvent = {handletabledata}
           /> 
          </div>
     )
