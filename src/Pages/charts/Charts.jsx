@@ -10,7 +10,7 @@ import Customconversion from '../../Components/chartdata/customconversion/Custom
 
 const Charts = () => {
 
-  const [selectedComponent,setSelectedComponent] = useState(null);
+  const [selectedComponent,setSelectedComponent] = useState('campaignCharts');
 
   const handleComponentChange = (componentName) => {
     setSelectedComponent(componentName);
