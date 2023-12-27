@@ -27,7 +27,7 @@ const Ads = () => {
     {
       isSwitchOn: <Switch  height={20} width={50} onColor="#666" offColor="#999" />,
       campaignName: 'New Awareness Ad',
-      deliveryStatus: '',
+      deliveryStatus: 'uses',
       bidStrategy: 'Used ad set',
       budget: 'Used ad set',
       results: 'Awareness',
