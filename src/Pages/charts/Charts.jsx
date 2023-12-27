@@ -9,9 +9,8 @@ import Adscharts from '../../Components/chartdata/adscharts/Adscharts';
 import Customconversion from '../../Components/chartdata/customconversion/Customconversion';
 
 const Charts = () => {
-
   const [selectedComponent,setSelectedComponent] = useState("campaignCharts");
-
+  
   const handleComponentChange = (componentName) => {
     setSelectedComponent(componentName);
   }

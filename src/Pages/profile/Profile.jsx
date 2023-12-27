@@ -6,8 +6,8 @@ import CustomButton from '../../Components/button/Button';
 import LoginButton from '../../Components/buttons/Button2';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import { auth } from '../../Components/firebase-config'
 import { updatePassword, updateProfile } from 'firebase/auth';
-import { auth } from '../../Components/firebase-config';
 
 const Profile = () => {
   const [showPasswordPopup, setShowPasswordPopup] = useState(false);
