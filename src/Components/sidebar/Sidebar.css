@@ -3,17 +3,9 @@
     border: 1px solid rgb(194, 181, 181);
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     max-width: 300px; 
-    max-height: 900px;
-}
-@media screen and (max-width: 600px) {
-    .side-container {
-        width: 50px ;
-    }
-}
-@media screen and (min-height: 1200px) {
-    .side-container {
-        max-height: 600px; 
-    }
+    height: 100vh;
+    overflow: auto;
+    
 }
 .sidelogo{
     margin-top: 15px;
