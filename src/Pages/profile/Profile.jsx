@@ -97,7 +97,7 @@ const Profile = () => {
                  Btntype="button"
                  BtnclassName="add-layout-btn savebtn"
                  BtnText="Save"
-                ClickEvent={handlePasswordSave && passwordUpdate} 
+                ClickEvent={handlePasswordSave && passwordupdatesuccess} 
                 />
                  {passwordUpdate && (
             <div className='password-pop-up'>
