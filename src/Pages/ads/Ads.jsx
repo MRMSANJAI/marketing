@@ -17,7 +17,7 @@ const Ads = () => {
   const columns = [
     { Header: 'Off/On', accessor: 'isSwitchOn'},
     { Header: 'Ad', accessor: 'campaignName' },
-    { Header: 'Preview Link', accessor: 'deliveryStatus' },
+    { Header: 'Campaign Name', accessor: 'deliveryStatus' },
     { Header: 'Bid Strategy', accessor: 'bidStrategy' },
     { Header: 'Budget', accessor: 'budget' },
     { Header: 'Objective', accessor: 'results' },
@@ -27,7 +27,7 @@ const Ads = () => {
     {
       isSwitchOn: <Switch  height={20} width={50} onColor="#666" offColor="#999" />,
       campaignName: 'New Awareness Ad',
-      deliveryStatus: '',
+      deliveryStatus: 'uses',
       bidStrategy: 'Used ad set',
       budget: 'Used ad set',
       results: 'Awareness',

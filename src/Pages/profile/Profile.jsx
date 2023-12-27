@@ -99,16 +99,16 @@ const Profile = () => {
                  BtnText="Save"
                 ClickEvent={handlePasswordSave && passwordupdatesuccess} 
                 />
-                 {passwordUpdate && (
-            <div className='password-pop-up'>
-                 <h3> Password sucessfully changed</h3>
-              <div className='popup-buttons'>
-               <LoginButton
-                Btntypes="button"
-                BtnclassNames="add-login-btn cancelbtn"
-                BtnTexts="Cancel"
-                ClickEvents={() => setPasswordUpdate(false)}
-                />
+            {passwordUpdate && (
+              <div className='password-pop-up'>
+                    <h3> Password sucessfully changed</h3>
+                   <div className='popup-buttons'>
+                    <LoginButton
+                      Btntypes="button"
+                      BtnclassNames="add-login-btn cancelbtn"
+                      BtnTexts="Cancel"
+                      ClickEvents={() => setPasswordUpdate(false)}
+                   />
               </div>
             </div>
           )}
