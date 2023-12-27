@@ -30,6 +30,7 @@ const [adienceTarget , setAdienceTarget] = useState('')
       customaud:customAudience,
       targety:adienceTarget,
     }
+    console.log("ccc",dataTosend)
     axios.post('http://localhost:3000/api/createcamp',dataTosend)
     .then((response) =>{
       console.log('Data Send Sucessfully',response.data)
