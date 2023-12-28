@@ -12,6 +12,8 @@ import { useNavigate } from "react-router-dom";
 const Createads = () => {
   
   const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedBid, setSelectedBid] = useState(null);
+  const [selectedObjective, setSelectedObjective] = useState(null);
   const [adname,setAdname] = useState("");
   const [campaignname,setCampaignname] = useState("");
   const [bidstrategy,setBidstrategy] = useState("");
@@ -25,8 +27,19 @@ const Createads = () => {
   const objectiveoptions = ['Cost Objective', 'Place Objective', 'Travel Objective']
 
   const onSelect = (selected) => {
-    setSelectedOption(selected);
+    setSelectedOption(selected.value);
+    setCampaignname(selected.value);
+    
+    setObjective(selected.value);
   };
+  const onBid = (selected) => {
+    setSelectedBid(selected.value);
+    setBidstrategy(selected.value);
+  }
+  const onObject = (selected) => {
+    setSelectedObjective(selected.value);
+    setObjective(selected.value);
+  }
 
   const handletabledata = async () => {
     const tabledata = {
@@ -53,7 +66,7 @@ const Createads = () => {
            <h1 className="camp-nam-head"><input type="checkbox" /> Campaign name</h1> 
            <ReactDropdown
           options={options}
-          onChange={(e) => {setCampaignname(e.target.value);}}
+          onChange={onSelect}
           value={selectedOption}
           placeholder="Awareness Campaign"
         />
@@ -67,8 +80,8 @@ const Createads = () => {
            <h1 className="camp-nam-head"><input type="checkbox" /> Bid Strategy</h1> 
            <ReactDropdown
           options={strategyoptions}
-          onChange={(e) => {setBidstrategy(e.target.value);}}
-          value={selectedOption}
+          onChange={onBid}
+          value={selectedBid}
           placeholder="Strategy"
         />
          </div>
@@ -82,8 +95,8 @@ const Createads = () => {
            <h1 className="camp-nam-head"><input type="checkbox" /> Objective</h1> 
            <ReactDropdown
           options={objectiveoptions}
-          onChange={(e) => {setObjective(e.target.value);}}
-          value={selectedOption}
+          onChange={onObject}
+          value={selectedObjective}
           placeholder="Objectives"
         />
          </div>
