@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import "./TargetAudience.css";
-import Dropdown from 'react-bootstrap/Dropdown';
+// import Dropdown from 'react-bootstrap/Dropdown';
 import { MdArrowDropDown } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 import CustomButton from '../../Components/button/Button';
 import { useNavigate } from 'react-router-dom';
+import ReactDropdown from 'react-dropdown';
+import"../../Pages/style.css";
+
 
 const Audience = () => {
   const navigate = useNavigate();
@@ -15,14 +18,14 @@ const Audience = () => {
     navigate('/target')
   }
      
-  const [showDropdown, setShowDropdown] = useState(false);
+const [selectedOption ,setSelectedOption]=useState(null);
 
-  const toggleDropdown = () => {
-    setShowDropdown(!showDropdown);
-  };
-  const handleOpen = () => {
-    setShowDropdown(false);
-  };
+  const options = [ 'Create Name', 'Preview', 'Share','Replicate']
+const defaultOption = options[null];
+ 
+const _onSelect=(selected)=>{
+  setSelectedOption(selected);
+}
 
   return (
     <div>
@@ -46,18 +49,13 @@ const Audience = () => {
            Btntype="button"
            BtnclassName="add-layout-btn Edit-btn"
            BtnText={<><MdEdit/> Edit</>}
-            />
-       <Dropdown show={showDropdown} onClick={toggleDropdown}>
-          <Dropdown.Toggle variant="success" id="dropdown-basic" className='down-button'>
-            <MdArrowDropDown onClick={handleOpen}/>
-          </Dropdown.Toggle>
-      <Dropdown.Menu className='Dropdown-container'>
-        <Dropdown.Item className='Droplist-content'>Create</Dropdown.Item>
-        <Dropdown.Item className='Droplist-content' >Preview</Dropdown.Item>
-        <Dropdown.Item className='Droplist-content' >Share</Dropdown.Item>
-        <Dropdown.Item  className='Droplist-content'>Replicate</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
+            />    
+          <ReactDropdown
+           options={options} 
+           onChange={_onSelect}
+           value={null} 
+           placeholder={null} 
+          />
         </div>   
       </div>
     </div>
@@ -74,17 +72,12 @@ const Audience = () => {
            BtnText={<><MdEdit/>Edit</>}
            ClickEvent={editClick}
             />
-       <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic" className='down-button'>
-          <MdArrowDropDown />
-           </Dropdown.Toggle>
-      <Dropdown.Menu className='Dropdown-container'>
-        <Dropdown.Item className='Droplist-content'>Create</Dropdown.Item>
-        <Dropdown.Item className='Droplist-content' >Preview</Dropdown.Item>
-        <Dropdown.Item className='Droplist-content' >Share</Dropdown.Item>
-        <Dropdown.Item  className='Droplist-content'>Replicate</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
+     <ReactDropdown
+           options={options} 
+           onChange={_onSelect}
+           value={null} 
+           placeholder={null} 
+          />
         </div>   
       </div>
     </div>
@@ -100,17 +93,12 @@ const Audience = () => {
            BtnclassName="add-layout-btn Edit-btn"
            BtnText={<><MdEdit/> Edit</>}
             />
-       <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic" className='down-button'>
-          <MdArrowDropDown />
-           </Dropdown.Toggle>
-      <Dropdown.Menu className='Dropdown-container'>
-        <Dropdown.Item className='Droplist-content'>Create</Dropdown.Item>
-        <Dropdown.Item className='Droplist-content' >Preview</Dropdown.Item>
-        <Dropdown.Item className='Droplist-content' >Share</Dropdown.Item>
-        <Dropdown.Item  className='Droplist-content'>Replicate</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
+        <ReactDropdown
+           options={options} 
+           onChange={_onSelect}
+           value={null} 
+           placeholder={null} 
+          />
         </div>   
       </div>
     </div>
@@ -127,17 +115,12 @@ const Audience = () => {
            BtnclassName="add-layout-btn Edit-btn"
            BtnText={<><MdEdit/> Edit</>}
             />
-       <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic" className='down-button'>
-          <MdArrowDropDown />
-           </Dropdown.Toggle>
-      <Dropdown.Menu className='Dropdown-container'>
-        <Dropdown.Item className='Droplist-content'>Create</Dropdown.Item>
-        <Dropdown.Item className='Droplist-content' >Preview</Dropdown.Item>
-        <Dropdown.Item className='Droplist-content' >Share</Dropdown.Item>
-        <Dropdown.Item  className='Droplist-content'>Replicate</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
+        <ReactDropdown
+           options={options} 
+           onChange={_onSelect}
+           value={null} 
+           placeholder={null} 
+          />
         </div>   
       </div>
     </div>
@@ -154,17 +137,12 @@ const Audience = () => {
            BtnclassName="add-layout-btn Edit-btn"
            BtnText={<><MdEdit/> Edit</>}
             />
-       <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic" className='down-button'>
-          <MdArrowDropDown />
-           </Dropdown.Toggle>
-      <Dropdown.Menu className='Dropdown-container'>
-        <Dropdown.Item className='Droplist-content'>Create</Dropdown.Item>
-        <Dropdown.Item className='Droplist-content' >Preview</Dropdown.Item>
-        <Dropdown.Item className='Droplist-content' >Share</Dropdown.Item>
-        <Dropdown.Item  className='Droplist-content'>Replicate</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
+        <ReactDropdown
+           options={options} 
+           onChange={_onSelect}
+           value={null} 
+           placeholder={null} 
+          />
         </div>   
       </div>
     </div>
@@ -181,17 +159,12 @@ const Audience = () => {
            BtnclassName="add-layout-btn Edit-btn"
            BtnText={<><MdEdit/> Edit</>}
             />
-       <Dropdown>
-          <Dropdown.Toggle variant="success" id="dropdown-basic" className='down-button'>
-          <MdArrowDropDown />
-           </Dropdown.Toggle>
-      <Dropdown.Menu className='Dropdown-container'>
-        <Dropdown.Item className='Droplist-content'>Create</Dropdown.Item>
-        <Dropdown.Item className='Droplist-content' >Preview</Dropdown.Item>
-        <Dropdown.Item className='Droplist-content' >Share</Dropdown.Item>
-        <Dropdown.Item  className='Droplist-content'>Replicate</Dropdown.Item>
-      </Dropdown.Menu>
-    </Dropdown>
+       <ReactDropdown
+           options={options} 
+           onChange={_onSelect}
+           value={null} 
+           placeholder={null} 
+          />
         </div>   
       </div>
     </div>
