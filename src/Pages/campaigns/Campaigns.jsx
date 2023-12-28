@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState ,useEffect} from 'react';
 import "./Campaigns.css"
 import { FaSearch } from "react-icons/fa";
 import { FaToggleOff } from 'react-icons/fa';
@@ -12,10 +12,11 @@ import { MdGroups2 } from 'react-icons/md';
 import { IoBag } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
 import { string } from 'prop-types';
+//  import { response } from 'express';
 const Campaigns = () => {
 
   const [showAddCampaignpopup,setShowAddCampaign] = useState(false);
-
+  const [tableData, setTableData]=useState([])
 const handleAddCampaign =()=>{
   setShowAddCampaign(true);
 }
@@ -32,7 +33,17 @@ const handleClick = () =>{
 const handleAddaudience = () => {
   navigate('./addaudience')
 }
+useEffect(()=>{
 
+  fetch('http://localhost:3000/api/createcamp')
+  .then((response)=> response.json())
+  .then((data)=>{
+    setTableData(data)
+  })
+  .catch((error)=>{
+    console.error('Error fecting data:',error)
+  })
+})
 
   return (
     <div className='donw'>
@@ -51,12 +62,12 @@ const handleAddaudience = () => {
 <table className="tables" >
       <thead className="tablehead">
         <tr className="th">
-          <th>On/Off</th>
+          <th>Dates</th>
           <th className="card4">Campaign</th>
-          <th className="card3">delivery</th>
-          <th className="card">Bid Stradegy</th>
-          <th className="card2">Budget</th>
-          <th className="card">Result</th>
+          <th className="card3">Budget </th>
+          <th className="card">Rupees</th>
+          <th className="card2">Customs</th>
+          <th className="card">Targeting</th>
         </tr>
       </thead>
       <tbody className="blue"  >
@@ -122,14 +133,18 @@ const handleAddaudience = () => {
       </tbody>
      
       <tbody >
-        <tr>
-          <td className="data"></td>
-          <td ></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+        {tableData.map((item, index)=>(
+
+      
+        <tr key={index}>
+          <td className="data">{item.startdate}</td>
+          <td>{item.campaign}</td>
+          <td>{item.budget}</td>
+          <td>{item.rupes}</td>
+          <td>{item.customaud}</td>
+          <td>{item.targety}</td>
         </tr>
+          ))}
       </tbody>
       <tbody>
         <tr>

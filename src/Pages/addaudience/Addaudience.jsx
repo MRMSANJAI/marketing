@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const Addaudience = () => {
   const [showaddaudience2, setshowaddaudience2] = useState(false);
-  
+  const [showendDate, SetShowendDate] =useState(false)
   const [isView , setView] = useState(true)
 
   const [campaignName, setCampaignName] =useState('')
@@ -20,7 +20,9 @@ const [adienceTarget , setAdienceTarget] = useState('')
     setshowaddaudience2(true);
     setView(!isView)
    }
-
+  const handleendDate =()=>{
+    SetShowendDate(true)
+  }
    const sendDataTOBackend = () =>{
     const dataTosend ={
       campaign:campaignName,
@@ -63,13 +65,18 @@ const [adienceTarget , setAdienceTarget] = useState('')
       <div className='container3'>
         <h4>Budget and Schedule</h4>
         <h4>Budget</h4>
-        <input className='texts' type="text" placeholder='  Daily Budget' value={dailyBudget} onChange={(e) => setDailyBudget(e.target.value)} /> 
-        <input className='Rs' type="text" placeholder='  Rs.800                              INR' value={currency} onChange={(e) => setCurrency(e.target.value)} />
+        <input className='start' type="text" placeholder='  Daily Budget' value={dailyBudget} onChange={(e) => setDailyBudget(e.target.value)} /> 
+        <input className='Rs' type="text" placeholder=' Rs.800                               INR' value={currency} onChange={(e) => setCurrency(e.target.value)} />
         <h4 >Schedule</h4>
         <h4 className='starts'>Start date</h4>
         <input className="dates" type="date" placeholder='20/1-0/2023' value={startDate} onChange={(e) => setStartDate(e.target.value)} />
+       
         <h4 className='dne'>End</h4>
-       <div className='check'> <input className='sixess' type="checkbox" /> <p className='ffff'>Set an end date</p></div>
+       <div className='check'> <input className='sixess' type="checkbox"onClick={handleendDate} /> <p className='ffff'>Set an end date</p>
+       {showendDate&&(
+         <input className="dates" type='date'placeholder='14/08/20023'/>
+       )}
+       </div>
       </div>
       <div>
       {isView && <button className='btnadd' onClick={handleaddaudience2}>Add Audience</button>}  
@@ -91,8 +98,8 @@ const [adienceTarget , setAdienceTarget] = useState('')
 
     <div>
         <h3 className="locate">Exclude these custom audience</h3>
-       <span className="searche"> <FaSearch /></span>
-        <input className="inbtn"  type="text" placeholder="     Search existing audience" value={customAudience} onChange={(e) => setCustomAdience (e.target.value)} />
+      <div className="searche">  <FaSearch /> </div>
+        <input className="inbtn"  type="text"  placeholder="     Search existing audience" value={customAudience} onChange={(e) => setCustomAdience (e.target.value)} />
     </div>
 
     <div>
