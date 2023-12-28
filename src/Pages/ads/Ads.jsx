@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Table from '../../Components/tabledynamic/Tabledynamic';
 import Switch from 'react-switch'
 import './Ads.css';
@@ -9,10 +9,21 @@ import { useNavigate } from 'react-router-dom';
 const Ads = () => {
 
   const navigate = useNavigate();
+  const [dataTable, setDataTable]=useState([])
 
   const clickAds = () => {
     navigate('/createads')
   }
+  useEffect(()=>{
+    fetch('http://localhost:3000/api/backendneoleon')
+    .then((response)=>response.json())
+    .then((dataToget)=>{
+      setDataTable(dataToget)
+    })
+    .catch((error)=>{
+      console.error('error fetching data',error)
+    })
+  })
 
   const columns = [
     { Header: 'Off/On', accessor: 'isSwitchOn'},
@@ -32,8 +43,7 @@ const Ads = () => {
       budget: 'Used ad set',
       results: 'Awareness',
     },
-    { isSwitchOn: '', campaignName: '', deliveryStatus: '', bidStrategy: '', budget: '', results: '', emptyColumn1: '' },
-    { isSwitchOn: '', campaignName: '', deliveryStatus: '', bidStrategy: '', budget: '', results: '', emptyColumn1: '' },
+    { isSwitchOn: "", campaignName: '', deliveryStatus: '', bidStrategy: '', budget: '', results: '', emptyColumn1: '' },
     { isSwitchOn: '', campaignName: '', deliveryStatus: '', bidStrategy: '', budget: '', results: '', emptyColumn1: '' },
     { isSwitchOn: '', campaignName: '', deliveryStatus: '', bidStrategy: '', budget: '', results: '', emptyColumn1: '' },
     { isSwitchOn: '', campaignName: '', deliveryStatus: '', bidStrategy: '', budget: '', results: '', emptyColumn1: '' },
