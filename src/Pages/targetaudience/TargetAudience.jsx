@@ -50,7 +50,7 @@ const _onSelect=(selected)=>{
            BtnclassName="add-layout-btn Edit-btn"
            BtnText={<><MdEdit/> Edit</>}
             />    
-          <ReactDropdown
+          <ReactDropdown 
            options={options} 
            onChange={_onSelect}
            value={null} 
@@ -72,7 +72,7 @@ const _onSelect=(selected)=>{
            BtnText={<><MdEdit/>Edit</>}
            ClickEvent={editClick}
             />
-     <ReactDropdown
+     <ReactDropdown 
            options={options} 
            onChange={_onSelect}
            value={null} 
@@ -93,7 +93,7 @@ const _onSelect=(selected)=>{
            BtnclassName="add-layout-btn Edit-btn"
            BtnText={<><MdEdit/> Edit</>}
             />
-        <ReactDropdown
+        <ReactDropdown className=''
            options={options} 
            onChange={_onSelect}
            value={null} 
