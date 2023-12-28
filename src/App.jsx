@@ -7,7 +7,7 @@ import ResetPassword from './Pages/forgotpassword/Forgotpassword';
 import Start from './Pages/createanaccount/Createaccount';
 import Authgaurd from './Components/Authgaurd';
 import Ads from './Pages/ads/Ads';
-import Compaigns from "./Pages/campaigns/Campaigns";
+import Campaigns from "./Pages/campaigns/Campaigns";
 import Profile from"./Pages/profile/Profile";
 import Templates from "./Pages/templates/Templates";
 import TargetAudience from "./Pages/targetaudience/TargetAudience";
@@ -31,7 +31,7 @@ function App () {
       <Route path='/start'element={<Start/>}/>
       <Route path='/home'element={<Authgaurd/>}/>
       <Route path='/target'element={<Authgaurd component={<Target/>}/>}/>
-      <Route path='/campaigns'element={<Authgaurd component={<Compaigns/>}/>}/>
+      <Route path='/campaigns'element={<Authgaurd component={<Campaigns/>}/>}/>
       <Route path='/ads'element={<Authgaurd component={<Ads/>}/>}/>
       <Route path='/profile'element={<Authgaurd component={<Profile/>}/>}/>
       <Route path='/templates'element={<Authgaurd component={<Templates/>}/>}/>
