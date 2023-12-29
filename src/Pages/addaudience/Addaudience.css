@@ -1,15 +1,15 @@
  .boxes{
      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
-     /* padding-top: 20%; */
+     /* padding-top: 18%; */
      display: flex;
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     /* height: 100vh;
+     /* height: 110vh;
      overflow: auto; */
- }
- .boxes h3 ,h4{
+     
+ } h3 ,h4{
   font-size: 18px;
   font-weight: 600;
  }
@@ -57,15 +57,18 @@
 
 .Rs{
     border: 2px solid grey; 
-    width: 25%;
-    margin-left: 30%;
+    width: 30%;
+    margin-left:150px;
     height: 37px;
     border-radius: 6px;
  
 }
-.famap{
-  gap: 5px;
-  padding-top: 7px;
+.budge{
+  border: 2px solid grey; 
+    width: 30%;
+    
+    height: 37px;
+    border-radius: 6px;
 }
 .starts{
     padding-left: 1%;
@@ -76,6 +79,7 @@
     height: 37px;
     border-radius: 6px;
     padding-left: 1%;
+    
 }
 .check{
     display: flex;
@@ -134,4 +138,4 @@
     display: flex;
     align-items: center;
   } */
-  
+ 
