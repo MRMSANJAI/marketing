@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Table from '../../Components/tabledynamic/Tabledynamic';
-import Switch from 'react-switch'
+import Switch from 'react-switch';
 import './Ads.css';
 import { FaSearch} from 'react-icons/fa';
 import CustomButton from '../../Components/button/Button';
@@ -15,7 +15,7 @@ const Ads = () => {
     navigate('/createads')
   }
   useEffect(()=>{
-    fetch('http://localhost:3000/api/backendneoleon')
+    fetch('http://localhost:3000/api/profileinfo')
     .then((response)=>response.json())
     .then((dataToget)=>{
       setDataTable(dataToget)
@@ -27,11 +27,11 @@ const Ads = () => {
 
   const columns = [
     { Header: 'Off/On', accessor: 'isSwitchOn'},
-    { Header: 'Ad', accessor: 'campaignName' },
-    { Header: 'Campaign Name', accessor: 'deliveryStatus' },
-    { Header: 'Bid Strategy', accessor: 'bidStrategy' },
+    { Header: 'Ad', accessor: 'adname' },
+    { Header: 'Campaign Name', accessor: 'campaignname' },
+    { Header: 'Bid Strategy', accessor: 'bidstrategy' },
     { Header: 'Budget', accessor: 'budget' },
-    { Header: 'Objective', accessor: 'results' },
+    { Header: 'Objective', accessor: 'objective' },
   ];
 
   const data = [
@@ -43,10 +43,6 @@ const Ads = () => {
       budget: 'Used ad set',
       results: 'Awareness',
     },
-    { isSwitchOn: "", campaignName: '', deliveryStatus: '', bidStrategy: '', budget: '', results: '', emptyColumn1: '' },
-    { isSwitchOn: '', campaignName: '', deliveryStatus: '', bidStrategy: '', budget: '', results: '', emptyColumn1: '' },
-    { isSwitchOn: '', campaignName: '', deliveryStatus: '', bidStrategy: '', budget: '', results: '', emptyColumn1: '' },
-    { isSwitchOn: '', campaignName: '', deliveryStatus: '', bidStrategy: '', budget: '', results: '', emptyColumn1: '' },
   ]
   return (
     <div className='ads-page'>
@@ -64,7 +60,7 @@ const Ads = () => {
         BtnText = '+ Create'
         ClickEvent = {clickAds}
         />
-         <Table columns={columns} data={data} />
+         <Table columns={columns} data={dataTable} />
       </div>
     </div>
   );

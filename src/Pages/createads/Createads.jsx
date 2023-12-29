@@ -1,24 +1,25 @@
 import React,{useState} from "react";
 import { IoSearch } from "react-icons/io5";
 import CustomButton from "../../Components/button/Button";
-import { FaPen } from "react-icons/fa";
-import './Createads.css'
-import { Dropdown } from "react-bootstrap";
+import './Createads.css';
 import ReactDropdown from "react-dropdown";
 import 'react-dropdown/style.css';
-import axios from 'axios'
+import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import "../../Pages/createads/styles.css";
                 
 const Createads = () => {
   
   const [selectedOption, setSelectedOption] = useState(null);
   const [selectedBid, setSelectedBid] = useState(null);
   const [selectedObjective, setSelectedObjective] = useState(null);
+
   const [adname,setAdname] = useState("");
   const [campaignname,setCampaignname] = useState("");
   const [bidstrategy,setBidstrategy] = useState("");
   const [budget,setBudget] = useState("");
   const [objective,setObjective] = useState("");
+
   const [data,setData] = useState(null);
   const navigate = useNavigate();
 
@@ -29,7 +30,6 @@ const Createads = () => {
   const onSelect = (selected) => {
     setSelectedOption(selected.value);
     setCampaignname(selected.value);
-    
     setObjective(selected.value);
   };
   const onBid = (selected) => {
@@ -51,7 +51,7 @@ const Createads = () => {
     }
     console.log(tabledata)
     try {
-      const response = await axios.post("http://localhost:3000/api/backendneoleon",tabledata)
+      const response = await axios.post("http://localhost:3000/api/profileinfo",tabledata)
       setData(response.data);
       console.log("table data updated successfully")
       navigate('/ads')

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import "./TargetAudience.css";
-// import Dropdown from 'react-bootstrap/Dropdown';
 import { MdArrowDropDown } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
 import CustomButton from '../../Components/button/Button';
 import { useNavigate } from 'react-router-dom';
 import ReactDropdown from 'react-dropdown';
-import"../../Pages/style.css";
+// import 'react-dropdown/style.css';
+import"../../Pages/targetaudience/Customstyle.css";
 
 
 const Audience = () => {
@@ -49,13 +49,14 @@ const _onSelect=(selected)=>{
            Btntype="button"
            BtnclassName="add-layout-btn Edit-btn"
            BtnText={<><MdEdit/> Edit</>}
-            />    
-          <ReactDropdown 
-           options={options} 
-           onChange={_onSelect}
-           value={null} 
-           placeholder={null} 
-          />
+            />   
+          <ReactDropdown
+           className='ReDropdown'
+            options={options} 
+            onChange={_onSelect}
+            value={null} 
+            placeholder={null} 
+         />
         </div>   
       </div>
     </div>
@@ -72,11 +73,12 @@ const _onSelect=(selected)=>{
            BtnText={<><MdEdit/>Edit</>}
            ClickEvent={editClick}
             />
-     <ReactDropdown 
-           options={options} 
-           onChange={_onSelect}
-           value={null} 
-           placeholder={null} 
+         <ReactDropdown
+            className='ReactDropdown'
+            options={options} 
+            onChange={_onSelect}
+            value={null} 
+            placeholder={null} 
           />
         </div>   
       </div>
@@ -93,7 +95,31 @@ const _onSelect=(selected)=>{
            BtnclassName="add-layout-btn Edit-btn"
            BtnText={<><MdEdit/> Edit</>}
             />
-        <ReactDropdown className=''
+         <ReactDropdown 
+           className='ReactDropdown'
+           options={options} 
+           onChange={_onSelect}
+           value={null} 
+           placeholder={null} 
+          />
+        </div>   
+      </div>
+    </div>
+
+    <div className='Target-container'>
+      <div className='company'>
+        <div className='heading1'>
+          <h4>XYZ Company</h4>
+          <p>Edited by Taru Pathok</p>
+        </div>
+        <div style={{ display: "flex",flexDirection:"row",gap:"5px" }}>   
+           <CustomButton 
+           Btntype="button"
+           BtnclassName="add-layout-btn Edit-btn"
+           BtnText={<><MdEdit/> Edit</>}
+            />
+        <ReactDropdown 
+           className='ReactDropdown'
            options={options} 
            onChange={_onSelect}
            value={null} 
@@ -116,6 +142,7 @@ const _onSelect=(selected)=>{
            BtnText={<><MdEdit/> Edit</>}
             />
         <ReactDropdown
+           className='ReactDropdown'
            options={options} 
            onChange={_onSelect}
            value={null} 
@@ -137,29 +164,8 @@ const _onSelect=(selected)=>{
            BtnclassName="add-layout-btn Edit-btn"
            BtnText={<><MdEdit/> Edit</>}
             />
-        <ReactDropdown
-           options={options} 
-           onChange={_onSelect}
-           value={null} 
-           placeholder={null} 
-          />
-        </div>   
-      </div>
-    </div>
-
-    <div className='Target-container'>
-      <div className='company'>
-        <div className='heading1'>
-          <h4>XYZ Company</h4>
-          <p>Edited by Taru Pathok</p>
-        </div>
-        <div style={{ display: "flex",flexDirection:"row",gap:"5px" }}>   
-           <CustomButton 
-           Btntype="button"
-           BtnclassName="add-layout-btn Edit-btn"
-           BtnText={<><MdEdit/> Edit</>}
-            />
-       <ReactDropdown
+       <ReactDropdown 
+           className='ReactDropdown'
            options={options} 
            onChange={_onSelect}
            value={null} 
