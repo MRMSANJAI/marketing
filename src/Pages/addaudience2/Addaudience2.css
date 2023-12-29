@@ -8,7 +8,7 @@
    border: 2px solid grey;
     border-radius: 10px;
     width: 800px;
-    margin-left: -15px;
+    /* margin-left: -px; */
     margin-top: 20px;
    padding-left: 2%;
    padding-bottom: 3%;
@@ -26,12 +26,56 @@
     padding-bottom: 4px;
 }
 .famap{
-    position: absolute;
-   margin-right: 60px;
-   padding-top: 40px;
+    
+   /* margin-right: 60px; */
+   /* padding-top: 40px; */
 }
-.searche{
-    position: absolute;
-    margin-top: 15px;
-    margin-left: 7px;
+.caption{
+    outline: none;
+background-color: transparent;
+    border: none;
+}
+
+.detail-inp{
+outline: none;
+background-color: transparent;
+    border: none;
+    width: 730px;
+    height: 40px;
+}
+.indetail{
+    border: 1px solid black;
+    width: 750px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.pointo{
+    border: 2px solid grey; ;
+   
+   margin-left: 150px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    width: 25%;
+    height: 40px;
+    padding-left: 10px;
+    
+}
+.catc{
+    display: flex;
+}
+.indiplace{
+    display: flex;
+    align-items: center;
+    
+}
+.butgecl{
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
 }
