@@ -207,4 +207,4 @@ useEffect(()=>{
   );
 }
 
-export default Campaigns;
+export default Campaigns
