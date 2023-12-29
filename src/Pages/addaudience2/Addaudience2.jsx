@@ -15,7 +15,7 @@ const addaudience2 = () => {
                 <div  > 
                      <h3 className="locate">location</h3>
                     <div className="famap"> <FaMapMarkerAlt /></div>
-                    <p className="india">india</p></div>
+                    <p className="indian">india</p></div>
 
                 <div> <h3 className="locate" >Age</h3>
                     <p >16-65+</p></div>
@@ -23,7 +23,7 @@ const addaudience2 = () => {
                 <div>
                     <h3 className="locate">Exclude these custom audience</h3>
                    <span className="searche"> <FaSearch /></span>
-                    <input className="inbtn"  type="text" placeholder="       Search existing audience" />
+                    <input   type="text" placeholder="Search existing audience" />
                 </div>
 
                 <div>
@@ -36,20 +36,15 @@ const addaudience2 = () => {
                     All genders
                 </div>
 
-                <div>
+                <div className="">
                     <h3>Detailed targeting</h3>
                   <span className="searche">  <FaSearch /></span>
-                    <input className="inbtn" type="text" placeholder="       Add Demographics,interests or behaviours.                                                           
-                                                                               Browser" />
+                    <input  type="text" placeholder="Add Demographics,interests or behaviours.                                                           
+                                                                         Browser" />
                 </div>
 
            
-            {/* <select>
-    <option>export</option>
-    <option>telegram</option>
-    <option>dljbhiueqfa</option>
-    <option>;kwigydwqd</option>
-</select> */}
+           
         </div>
     )
 
